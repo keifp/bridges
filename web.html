@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Websites — Bridges</title>
+<meta name="description" content="Church websites built for first-time guests: design, launch and care.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter+Tight:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500&family=Josefin+Sans:wght@400;600&family=Anton&family=Instrument+Serif:ital@0;1&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;600&family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Shrikhand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.w-hero{padding:80px 0 40px}
+.w-hero h1{margin:16px 0 22px;max-width:960px}
+.browser{background:#fff;border-radius:14px;box-shadow:0 40px 70px -40px rgba(23,21,18,.5),0 0 0 1px var(--line);overflow:hidden;margin-top:48px}
+.browser .bar{display:flex;align-items:center;gap:8px;padding:10px 14px;background:#ECE7DD;border-bottom:1px solid var(--line)}
+.browser .bar i{width:11px;height:11px;border-radius:50%;background:#D3CBBC}
+.browser .bar span{margin-left:12px;flex:1;max-width:420px;background:#fff;border-radius:6px;padding:4px 12px;font-size:12.5px;color:var(--muted)}
+.site{container-type:inline-size;font-family:"Inter Tight",var(--sans);color:#1C2B24}
+.site .snav{display:flex;justify-content:space-between;align-items:center;padding:2.2cqw 4cqw;font-size:1.3cqw}
+.site .snav .cm{width:2.6cqw;height:2.6cqw}
+.site .snav b{font-family:var(--serif);font-size:2cqw;letter-spacing:.2em;color:#18332A}
+.site .snav nav{display:flex;gap:2.6cqw}
+.site .snav .cta{background:#18332A;color:#E8D9A8;padding:.8cqw 1.8cqw;border-radius:99px;font-weight:600}
+.site .shero{position:relative;height:36cqw;display:flex;align-items:flex-end;padding:4cqw;color:#fff}
+.site .shero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.site .shero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,36,29,.85),rgba(15,36,29,.1) 70%)}
+.site .shero div{position:relative;z-index:1;max-width:60%}
+.site .shero h2{font-family:var(--serif);font-weight:400;font-size:5cqw;line-height:1}
+.site .shero p{font-size:1.5cqw;margin-top:1.2cqw;opacity:.9}
+.site .shero .btns{display:flex;gap:1.2cqw;margin-top:2cqw}
+.site .shero .btns span{background:#E8D9A8;color:#18332A;font-weight:700;font-size:1.3cqw;padding:1cqw 2cqw;border-radius:99px}
+.site .shero .btns span+span{background:transparent;color:#fff;border:.15cqw solid #fff}
+.site .strip{display:grid;grid-template-columns:repeat(3,1fr);gap:2cqw;padding:3cqw 4cqw;background:#F6F2E8}
+.site .strip div{background:#fff;border-radius:1cqw;padding:2cqw;font-size:1.25cqw;line-height:1.4}
+.site .strip b{display:block;font-family:var(--serif);font-weight:400;font-size:2.1cqw;color:#18332A;margin-bottom:.6cqw}
+.site .tiles{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:1.6cqw;padding:3cqw 4cqw 4cqw}
+.site .tiles figure{position:relative;border-radius:1cqw;overflow:hidden;aspect-ratio:4/3}
+.site .tiles img{width:100%;height:100%;object-fit:cover}
+.site .tiles figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.4cqw;color:#fff;font-size:1.4cqw;font-weight:600;background:linear-gradient(transparent,rgba(0,0,0,.7))}
+.wsvc{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.wsvc .panel h3{font-size:21px}.wsvc .panel ul{list-style:none;padding:0;margin-top:10px;display:grid;gap:6px}.wsvc .panel li::before{content:"— ";color:var(--ember)}
+@media (max-width:900px){.wsvc{grid-template-columns:1fr 1fr}}@media (max-width:560px){.wsvc{grid-template-columns:1fr}}
+.mob{display:flex;gap:24px;flex-wrap:wrap;justify-content:center}
+.mob .phone{width:260px}
+.ps{padding:16px;font-size:13px;display:grid;gap:10px;font-family:"Inter Tight",var(--sans)}
+.ps h4{font-family:var(--serif);font-weight:400;font-size:24px;color:#18332A;line-height:1.05}
+.ps .row{display:flex;gap:10px;align-items:flex-start;border-top:1px solid #eee;padding-top:10px}
+.ps .row b{display:block;font-size:13.5px}
+.ps .ico{width:28px;height:28px;border-radius:8px;background:#E8D9A8;flex:none;display:grid;place-items:center;font-weight:700;color:#18332A;font-size:12px}
+.ps .btn2{background:#18332A;color:#E8D9A8;text-align:center;padding:11px;border-radius:99px;font-weight:700}
+.ps img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:10px}
+.ps input{width:100%;border:1px solid #ddd;border-radius:8px;padding:9px;font:inherit}
+.score{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.score div{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:20px;text-align:center}
+.score b{display:block;font-family:var(--serif);font-weight:400;font-size:44px;color:var(--teal);line-height:1}
+.score span{font-size:14px;color:var(--ink-2)}
+@media (max-width:700px){.score{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.site .snav nav{display:none}.site .snav{font-size:2.6cqw}.site .snav .cm{width:2.6cqw;height:2.6cqw}
+.site .snav b{font-size:3.4cqw}.site .snav .cta{font-size:2.4cqw}.site .shero{height:60cqw}.site .shero div{max-width:90%}.site .shero h2{font-size:8cqw}.site .shero p{font-size:3cqw}.site .shero .btns span{font-size:2.6cqw}.site .strip{grid-template-columns:1fr}.site .strip div{font-size:3cqw}.site .strip b{font-size:4.4cqw}.site .tiles{grid-template-columns:1fr 1fr}.site .tiles figure:first-child{grid-column:1/-1}.site .tiles figcaption{font-size:3cqw}}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.plan{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:30px;display:flex;flex-direction:column;gap:10px;position:relative}
+.plan.feat{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.plan .pop{position:absolute;top:-12px;left:30px;background:var(--ember);color:#fff;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:99px}
+.plan .len{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ember)}.plan.feat .len{color:var(--gold)}
+.plan h3{font-size:26px}.plan.feat h3{color:var(--white)}
+.plan .price{font-size:16px;color:var(--ink-2)}.plan.feat .price{color:#C9C1B2}
+.plan .price b{font-family:var(--serif);font-weight:400;font-size:48px;color:var(--ink);letter-spacing:-.02em}.plan.feat .price b{color:var(--white)}
+.plan ul{list-style:none;display:grid;align-content:start;gap:8px;margin:8px 0 14px;font-size:15px;color:var(--ink-2);flex:1}.plan.feat ul{color:#D6CEBF}
+.plan li{padding-left:22px;position:relative}.plan li::before{content:"✓";position:absolute;left:0;color:var(--ember);font-weight:700}
+.plan .btn{justify-content:center}.plan.feat .btn{background:var(--gold);color:var(--ink)}.plan.feat .btn:hover{background:var(--white)}
+.plan .small{font-size:12.5px;color:var(--muted);text-align:center}
+@media (max-width:900px){.plans{grid-template-columns:1fr}}
+.toast{position:fixed;left:50%;bottom:max(24px,env(safe-area-inset-bottom,0px));translate:-50% 0;background:var(--ink);color:var(--paper);padding:14px 20px;border-radius:12px;font-size:15px;box-shadow:0 18px 40px -16px rgba(0,0,0,.5);z-index:100;max-width:calc(100% - 32px)}
+.plan .pdesc{font-size:15px;color:var(--ink-2)}.plan.feat .pdesc{color:#C9C1B2}
+.plan .btn+.btn{margin-top:-2px}
+.plan.feat .btn.ghost{background:transparent;color:var(--paper);border-color:#6B655B}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="wrap">
+    <a class="logo" href="index.html"><span class="logo-mark"></span>Bridges</a>
+    <ul class="nav-links"><li><a href="index.html">Social Media</a></li><li><a href="web.html" class="on">Websites</a></li><li><a href="logos.html">Logos</a></li><li><a href="ai.html">AI Consulting</a></li><li><a href="contact.html">Contact</a></li></ul>
+    <a class="btn" href="index.html#packages">See packages</a>
+  </div>
+</nav>
+
+<header class="w-hero">
+  <div class="wrap">
+    <span class="eyebrow">Website services</span>
+    <h1>A front door that feels like <em class="ital">your Sunday morning.</em></h1>
+    <p class="lede">Most people visit a church's website before they ever visit the church. We design and build sites that answer a guest's real questions in seconds, look great on a phone, and are easy for your staff to keep up to date.</p>
+    <div class="hero-row"><a class="btn" href="#services">What we build</a><a class="btn ghost" href="index.html#packages">See packages</a></div>
+
+    <div class="browser">
+      <div class="bar"><i></i><i></i><i></i><span>cedarlinechurch.org</span></div>
+      <div class="site">
+        <div class="snav"><b style="display:flex;align-items:center;gap:.8cqw"><svg viewBox="0 0 60 60" width="28" height="28" class="cm" aria-hidden="true" style="flex:none"><path d="M30 4V30M23 13H37M30 30C26 38 18 42 12 54M30 30C34 38 42 42 48 54M30 34C29 42 25 48 23 54M30 34C31 42 35 48 37 54" stroke="#18332A" stroke-width="3" fill="none" stroke-linecap="round"/></svg>CEDARLINE</b><nav><span>Plan a visit</span><span>Sermons</span><span>Kids</span><span>Groups</span><span>Give</span></nav><span class="cta">Plan your visit</span></div>
+        <div class="shero"><img src="img/worship2.jpg" alt=""><div><h2>You're welcome here.</h2><p>Sundays at 9 and 11 · 1200 Cedarline Road · Kids ministry for every age</p><div class="btns"><span>Plan your visit</span><span>Watch online</span></div></div></div>
+        <div class="strip"><div><b>What to expect</b>About 70 minutes, casual dress, coffee in the lobby, and a team to help you find your way.</div><div><b>For your kids</b>Safe check-in, trained volunteers, and a lesson they'll actually remember.</div><div><b>This series</b>Rooted, a six-week series on going deeper. Catch up on past weeks anytime.</div></div>
+        <div class="tiles"><figure><img src="img/nv-meal.jpg" alt=""><figcaption>Find a group</figcaption></figure><figure><img src="img/baptism.jpg" alt=""><figcaption>Next steps</figcaption></figure><figure><img src="img/volunteers.jpg" alt=""><figcaption>Serve</figcaption></figure></div>
+      </div>
+    </div>
+    <p class="note">Concept homepage for Cedarline Church, the same church as the Rooted project, so the website and Sunday screens share one look.</p>
+  </div>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head"><div><span class="eyebrow">What we build</span><h2>Everything a church site needs</h2></div><p>We work in the platform that fits your team, from Subsplash and Squarespace to WordPress, and we connect it to the tools you already use.</p></div>
+    <div class="wsvc">
+      <div class="panel"><h3>Design and build</h3><p>A new site, or a full refresh of the one you have.</p><ul><li>Guest-first page structure</li><li>Mobile-first design</li><li>Your brand, photos and voice</li></ul></div>
+      <div class="panel"><h3>Plan a visit</h3><p>The most important page on a church site.</p><ul><li>What to expect, in plain words</li><li>Kids check-in and parking info</li><li>A simple visit form with follow-up</li></ul></div>
+      <div class="panel"><h3>Sermons and media</h3><p>Make every message easy to find and share.</p><ul><li>Sermon archive by series</li><li>YouTube and podcast feeds</li><li>Notes and group guides</li></ul></div>
+      <div class="panel"><h3>Events and giving</h3><p>Connect the site to the systems you already run.</p><ul><li>Calendar and event sign-ups</li><li>Online giving integration</li><li>Subsplash app tie-in</li></ul></div>
+      <div class="panel"><h3>Found on Google</h3><p>Help people nearby find you when they search.</p><ul><li>Google Business Profile setup</li><li>Local search basics</li><li>Fast-loading pages</li></ul></div>
+      <div class="panel"><h3>Accessible to all</h3><p>A site everyone can use, including people with disabilities.</p><ul><li>Readable type and contrast</li><li>Screen reader friendly</li><li>Spanish pages where needed</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div><span class="eyebrow">On a phone</span><h2>Built for the parking lot</h2></div><p>Most first-time guests look you up on their phone, often on Sunday morning. These screens are designed for that moment.</p></div>
+    <div class="mob">
+      <div class="phone"><div class="phone-screen"><div class="ps"><img src="img/nv-greeter.jpg" alt=""><h4>Plan your visit</h4><div class="row"><span class="ico">9</span><div><b>Sundays at 9 &amp; 11</b>About 70 minutes</div></div><div class="row"><span class="ico">P</span><div><b>Guest parking</b>Front row, look for the green signs</div></div><div class="row"><span class="ico">K</span><div><b>Kids</b>Check in at the welcome desk</div></div><span class="btn2">Let us know you're coming</span></div></div></div>
+      <div class="phone"><div class="phone-screen"><div class="ps"><h4>Rooted</h4><span style="color:#777">Sermon series · 6 weeks</span><img src="img/preach3.jpg" alt=""><div class="row"><span class="ico">2</span><div><b>Roots go down first</b>Week 2 · Watch · Notes</div></div><div class="row"><span class="ico">1</span><div><b>Planted on purpose</b>Week 1 · Watch · Notes</div></div><span class="btn2">Get the group guide</span></div></div></div>
+      <div class="phone"><div class="phone-screen"><div class="ps"><h4>We'd love to meet you</h4><span>Tell us you're coming and someone will save you a seat.</span><input placeholder="Your name" aria-label="Your name"><input placeholder="Email or phone" aria-label="Email or phone"><input placeholder="Which service?" aria-label="Which service"><span class="btn2">Send</span><span style="font-size:11.5px;color:#888">We'll only use this to welcome you.</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+
+<section id="packages">
+  <div class="wrap">
+    <div class="sec-head"><div><span class="eyebrow">Ways to work together</span><h2>Launch, refresh or care</h2></div><p>No setup fees. Your church owns its website platform and domain account, and pays the platform directly.</p></div>
+    <div class="plans"><div class="plan"><span class="len">2–3 weeks</span><h3>Refresh</h3><p class="price"><b>$800</b> one-time</p><p class="pdesc">Keep your platform and fix what matters most.</p><ul><li>Updates to up to 20 existing pages</li><li>New homepage and Plan a visit page</li><li>Updated photos and copy, consistent styling</li><li>Speed and mobile fixes</li><li>Two rounds of edits</li></ul><button class="btn buy" type="button" data-plan="refresh">Buy now</button><span class="small">Paid once · Work starts with a needs assessment</span></div><div class="plan feat"><span class="pop">Most popular</span><span class="len">8–10 weeks</span><h3>New site</h3><p class="price"><b>$2,500</b> one-time</p><p class="pdesc">A full design and build on the right platform for you.</p><ul><li>Site map and content plan</li><li>Custom design in your brand</li><li>Up to 40 pages</li><li>Giving, events and sermon archive setup</li><li>Google Business Profile setup</li><li>Staff training and 30 days of launch support</li></ul><button class="btn buy" type="button" data-plan="newsite">Pay in full</button><button class="btn ghost buy" type="button" data-plan="newsite3">3 payments of $850</button><span class="small">Week 1 is your needs assessment</span></div><div class="plan"><span class="len">Monthly</span><h3>Care plan</h3><p class="price"><b>$150</b>/month</p><p class="pdesc">We keep it current so your staff doesn't have to.</p><ul><li>Weekly updates and new events</li><li>Seasonal homepage changes</li><li>Up to 3 hours of changes a month</li><li>Monthly visitor report</li></ul><button class="btn buy" type="button" data-plan="care">Subscribe</button><span class="small">$75/month with any social package · Free with Ministry Partner</span></div></div>
+    <p class="note" style="margin-top:20px">Extra pages are $100 each. Building a new site and signing up for Sunday + Social or Ministry Partner? Mention it for 10% off.</p>
+  </div>
+</section>
+
+
+<footer><div class="wrap"><span>© 2026 Bridges</span></div></footer>
+<script>
+(function(){
+  /* Paste each Stripe Payment Link here once it exists */
+  var LINKS={refresh:"",newsite:"",newsite3:"",care:""};
+  var t;function toast(msg){var d=document.querySelector('.toast');if(!d){d=document.createElement('div');d.className='toast';d.setAttribute('role','status');document.body.appendChild(d);}d.textContent=msg;d.hidden=false;clearTimeout(t);t=setTimeout(function(){d.hidden=true},4000);}
+  document.querySelectorAll('.buy').forEach(function(b){b.addEventListener('click',function(){var u=LINKS[b.dataset.plan];if(u){window.location.href=u;}else{toast('Online checkout is almost ready. Please check back soon.');}});});
+})();
+</script>
+<script>(function(){try{history.scrollRestoration="manual"}catch(e){}function top(){if(!location.hash)window.scrollTo(0,0)}top();setTimeout(top,80);addEventListener("load",function(){top();setTimeout(top,80)});addEventListener("pageshow",top);})();</script>
+</body>
+</html>

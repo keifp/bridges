@@ -3,55 +3,141 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Erco Media — Digital Media for Churches</title>
-<meta name="description" content="Erco Media is a church digital media studio: social strategy, reels and carousels, Sunday screen media, photography, and volunteer capture teams.">
+<title>Bridges — Media and AI for Churches</title>
+<meta name="description" content="Bridges is a church media and AI studio: social strategy, reels and carousels, Sunday screen media, photography, and volunteer capture teams.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter+Tight:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500&family=Josefin+Sans:wght@400;600&family=Anton&family=Instrument+Serif:ital@0;1&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;600&family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Shrikhand&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <style>
-/* thumbnail art */
-.art-unhurried{background:#EDE4D3;display:flex;flex-direction:column;justify-content:flex-end;padding:8%;color:#2F3A2C}
-.art-unhurried .sun{position:absolute;width:46%;aspect-ratio:1;border-radius:50%;background:#E9A15B;top:14%;right:12%}
-.art-unhurried .hz{position:absolute;left:0;right:0;top:46%;height:2px;background:#2F3A2C;opacity:.4}
+/* thumbnail art: four different visual languages */
 .hero-strip .tile,.card .thumb{container-type:inline-size}
-.art-unhurried .t{font-family:var(--serif);font-style:italic;font-size:17cqw;line-height:1;position:relative}
-.art-unhurried small{font-size:12px;letter-spacing:.2em;text-transform:uppercase;position:relative;margin-top:8px}
+.art{position:absolute;inset:0;overflow:hidden}
 
+/* 1 · Unhurried: light linen, arched window, classic caps */
+.art-unhurried{background:#EEE8DD;color:#2B2A2C;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5cqw;text-align:center}
+.art-unhurried .archframe{width:46%}
+.art-unhurried .k{font-family:"Josefin Sans",var(--sans);font-size:3.2cqw;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:#A8582B;padding-left:.3em}
+.art-unhurried .t{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:10cqw;letter-spacing:.12em;text-transform:uppercase;line-height:1;padding-left:.12em;margin-top:-2cqw}
+.art-unhurried .ref{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:3.6cqw;color:#2C3C57}
+/* 2 · Rooted: forest green, gold roots */
 .art-rooted{background:#18332A;color:#E8D9A8;display:flex;align-items:center;justify-content:center;flex-direction:column}
 .art-rooted .t{font-family:var(--serif);font-size:13cqw;letter-spacing:.28em;padding-left:.28em;position:relative}
 .art-rooted svg{position:absolute;inset:0;width:100%;height:100%;opacity:.45}
-.art-rooted small{position:relative;font-size:12px;letter-spacing:.24em;text-transform:uppercase;opacity:.8;margin-top:10px}
+.art-rooted small{position:relative;font-size:3.2cqw;letter-spacing:.24em;text-transform:uppercase;opacity:.8;margin-top:3cqw}
+/* 3 · Northvale: editorial serif */
+.art-strategy{background:#F2EDE3;color:#141414;padding:8%;display:flex;flex-direction:column;justify-content:space-between}
+.art-strategy .t{font-family:"Instrument Serif",Georgia,serif;font-size:19cqw;line-height:.92;letter-spacing:-.02em}
+.art-strategy .q{font-family:"Instrument Serif",Georgia,serif;color:#2D5BFF}
+.art-strategy .brush{display:inline-block;background:#2D5BFF;color:#F2EDE3;padding:0 3cqw;transform:rotate(-2deg);border-radius:2px 6px 3px 8px;font-style:italic}
+.art-strategy small{font-family:var(--sans);font-size:3.2cqw;font-weight:600;letter-spacing:.1em;text-transform:uppercase;display:flex;justify-content:space-between;border-top:1px solid #141414;padding-top:3%}
 
-.art-strategy{background:#1E1D1B;color:#F3EFE6;padding:7%;display:flex;flex-direction:column;justify-content:space-between}
-.art-strategy .bars{display:flex;align-items:flex-end;gap:6%;height:55%}
-.art-strategy .bars i{flex:1;background:#3A3833;border-radius:6px 6px 0 0}
-.art-strategy .bars i.hi{background:var(--ember)}
-.art-strategy .t{font-family:var(--serif);font-size:9cqw;line-height:1.1}
-.art-strategy small{color:#9F9789;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+/* 4 · Mesa Grove: heavy type over a blurred photo */
+.art-capture{display:flex;align-items:center;justify-content:center;text-align:center}
+.art-capture .photo{position:absolute;inset:-10%;filter:blur(14px);background:radial-gradient(circle at 25% 30%,#E0482F 0 14%,transparent 26%),radial-gradient(circle at 70% 25%,#F06A3C 0 10%,transparent 22%),radial-gradient(circle at 60% 70%,#D93A2A 0 16%,transparent 30%),radial-gradient(circle at 20% 80%,#F2A33A 0 8%,transparent 20%),radial-gradient(circle at 85% 85%,#E85B37 0 9%,transparent 20%),linear-gradient(160deg,#36593A,#1F3A27)}
+.art-capture .t{position:relative;z-index:2;font-family:"Archivo Black",Impact,sans-serif;color:#FBF4EA;font-size:11cqw;line-height:1.02;text-transform:uppercase;padding:0 7%;text-shadow:0 2px 18px rgba(0,0,0,.25)}
+.art-capture .t span{display:inline-block}
+.art-capture .t .up{transform:translateY(-.12em)}.art-capture .t .dn{transform:translateY(.1em)}.art-capture .t .sm{font-size:.72em}
 
-.art-capture{background:#B95C3A;padding:7%;display:flex;align-items:center;justify-content:center}
-.art-capture .sheet{background:#FFFDF8;border-radius:10px;width:78%;padding:6%;transform:rotate(-3deg);box-shadow:0 20px 40px -20px rgba(0,0,0,.5);font-size:clamp(9px,1vw,12px);color:#333}
-.art-capture .sheet b{display:block;font-family:var(--serif);font-size:clamp(14px,1.8vw,22px);font-weight:500;margin-bottom:6px;color:#171512}
-.art-capture .row{display:flex;gap:6px;align-items:center;padding:4px 0;border-top:1px solid #eee}
-.art-capture .box{width:10px;height:10px;border:1.5px solid #B95C3A;border-radius:3px;flex:none}
-.art-capture .box.on{background:#B95C3A}
-.hero-strip .tile .art-unhurried,.hero-strip .tile .art-rooted,.hero-strip .tile .art-strategy,.hero-strip .tile .art-capture,
-.card .thumb>div{position:absolute;inset:0}
+/* wide card thumbnails */
+.card .art-unhurried{flex-direction:row;gap:6cqw}.card .art-unhurried .archframe{width:22%}.card .art-unhurried .txt{display:flex;flex-direction:column;gap:2cqw;align-items:flex-start;text-align:left}
+.card .art-unhurried .t{font-size:7cqw;margin-top:0;padding-left:0}.card .art-unhurried .k{font-size:1.9cqw;padding-left:0}.card .art-unhurried .ref{font-size:2.4cqw}
+.card .art-rooted .t{font-size:9cqw}.card .art-rooted small{font-size:2cqw}
+.card .art-strategy{padding:6% 7%}.card .art-strategy .t{font-size:11cqw}.card .art-strategy small{font-size:2.1cqw}
+.card .art-capture .t{font-size:7.5cqw;padding:0 12%}
+
+/* 5 · Hollow Creek: documentary contact sheet */
+.art-faces{background:#151515;padding:6%;display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:1fr;gap:3%;font-family:"IBM Plex Mono",monospace}
+.art-faces .fr{position:relative;background:radial-gradient(ellipse 34% 26% at 50% 40%,#bdbdbd 0 60%,transparent 62%),radial-gradient(ellipse 58% 40% at 50% 100%,#9a9a9a 0 70%,transparent 72%),linear-gradient(#5b5b5b,#2c2c2c)}
+.art-faces .fr:nth-child(2n){background:radial-gradient(ellipse 30% 24% at 42% 42%,#d0d0d0 0 60%,transparent 62%),radial-gradient(ellipse 55% 38% at 40% 100%,#888 0 70%,transparent 72%),linear-gradient(#777,#3a3a3a)}
+.art-faces .fr:nth-child(3n){background:radial-gradient(ellipse 32% 25% at 60% 38%,#a8a8a8 0 60%,transparent 62%),radial-gradient(ellipse 60% 40% at 62% 100%,#6f6f6f 0 70%,transparent 72%),linear-gradient(#4a4a4a,#1f1f1f)}
+.art-faces .fr{overflow:hidden}
+.art-faces .fr i{z-index:2;position:absolute;left:4%;bottom:3%;font-style:normal;font-size:2.4cqw;color:#E9E2C9}
+.art-faces .pick{outline:.7cqw solid #E2382B;outline-offset:.5cqw}
+.art-faces .t{grid-column:1/-1;color:#EDEDED;font-size:3.2cqw;letter-spacing:.08em;text-transform:uppercase;align-self:end}
+
+/* 6 · Pinecrest: YouTube-thumbnail punch */
+.art-shorts{background:#FFE14D;color:#0E0E0E;padding:7%;display:flex;flex-direction:column;justify-content:space-between}
+.art-shorts .t{position:relative;z-index:2;font-family:"Bricolage Grotesque",var(--sans);font-weight:800;font-size:13cqw;line-height:.92;letter-spacing:-.03em;text-transform:uppercase;max-width:80%}
+.art-shorts .t mark{display:inline-block;background:#0E0E0E;color:#FFE14D;padding:.6cqw 1.5cqw 0;line-height:.95;margin:1.2cqw 0}
+.art-shorts .bar{display:flex;gap:2cqw;align-items:center;font-family:"IBM Plex Mono",monospace;font-size:3cqw;font-weight:600}
+.art-shorts .play{width:12cqw;aspect-ratio:1.4;background:#E2382B;border-radius:3cqw;display:grid;place-items:center}
+.art-shorts .play::after{content:"";border-left:3.2cqw solid #fff;border-top:2cqw solid transparent;border-bottom:2cqw solid transparent;margin-left:.6cqw}
+.art-shorts .phone{overflow:hidden;position:absolute;right:6%;bottom:16%;width:30%;aspect-ratio:9/16;border:1.2cqw solid #0E0E0E;border-radius:4cqw;background:linear-gradient(170deg,#E2382B,#6B1F18);transform:rotate(8deg)}
+
+/* 7 · Ridgeview: retro camp badge */
+.art-camp{background:#F3E3C3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3cqw;color:#3B2416;text-align:center}
+.art-camp .sun{width:62%;aspect-ratio:2/1;border-radius:999px 999px 0 0;background:repeating-linear-gradient(180deg,#E8572A 0 14%,#F3E3C3 14% 18%,#F08A2E 18% 32%,#F3E3C3 32% 36%,#F5B93B 36% 50%,#F3E3C3 50% 54%,#7A9A5B 54% 100%)}
+.art-camp .t{font-family:Shrikhand,"Cooper Black",Georgia,serif;font-size:15cqw;line-height:.9;color:#E8572A;text-shadow:.6cqw .6cqw 0 #3B2416}
+.art-camp small{font-family:var(--sans);font-weight:700;font-size:3.2cqw;letter-spacing:.24em;text-transform:uppercase}
+
+/* 8 · Brookhollow: Swiss advent grid */
+.art-advent{background:#F7F7F4;color:#111;padding:7%;display:grid;grid-template-columns:repeat(5,1fr);gap:1.5cqw;align-content:start}
+.art-advent b{grid-column:1/-1;font-family:"Inter Tight",var(--sans);font-weight:700;font-size:15cqw;letter-spacing:-.05em;line-height:.85;margin-bottom:3cqw}
+.art-advent b span{color:#E2231A}
+.art-advent i{font-style:normal;font-family:"Inter Tight",var(--sans);font-weight:600;font-size:3cqw;aspect-ratio:1;border-top:.4cqw solid #111;padding-top:1cqw}
+.art-advent i.on{background:#E2231A;color:#fff;border-color:#E2231A;padding-left:1cqw}
+.card .art-faces{grid-template-columns:repeat(5,1fr);padding:4%}.card .art-faces .t{font-size:2cqw}.card .art-faces .fr i{font-size:1.5cqw}
+.card .art-shorts .t{font-size:8.5cqw;max-width:65%}.card .art-shorts .phone{width:16%;bottom:12%;right:10%}.card .art-shorts .bar{font-size:2cqw}.card .art-shorts .play{width:8cqw}
+.card .art-camp{flex-direction:row;gap:5cqw;text-align:left}.card .art-camp .sun{width:34%}.card .art-camp .t{font-size:10cqw}.card .art-camp small{font-size:2cqw}
+.card .art-advent{grid-template-columns:repeat(13,1fr);padding:5%}.card .art-advent b{font-size:9cqw}.card .art-advent i{font-size:1.6cqw}
+.hero-strip .tile:nth-child(n+5){aspect-ratio:1}
+.hero-strip .art-shorts .t{max-width:58%}
+.hero-strip .tile:nth-child(n+5) .art-advent{padding:6%;gap:1cqw}
+.hero-strip .tile:nth-child(n+5) .art-advent b{font-size:13cqw;margin-bottom:2cqw}
+.hero-strip .tile:nth-child(n+5) .art-advent i{aspect-ratio:auto;height:11cqw}
+.svc-ai{grid-column:1/-1;display:grid;grid-template-columns:1fr 1.6fr;gap:40px;background:linear-gradient(135deg,#1E1C19,#2A2420)}
+.svc-ai .num{color:var(--gold)}
+.svc-ai h3{font-size:34px}
+.svc-ai .tag-ai{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--gold);margin-bottom:12px}
+.ai-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-content:center}
+.ai-cols b{color:var(--white);font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.ai-cols ul{margin-top:10px}
+.ai-cols li{padding:5px 0;border-top:1px solid #3A362F}
+@media (max-width:900px){.svc-ai{grid-template-columns:1fr;gap:20px}.ai-cols{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.ai-cols{grid-template-columns:1fr}}
+
+/* contact form */
+.cform{background:#FFFDF8;color:var(--ink);border-radius:var(--r);padding:28px;display:grid;gap:16px;min-width:0}
+.cform .frow{display:grid;gap:6px;border:0;min-width:0}
+.cform label,.cform legend{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+.cform input:not([type=checkbox]),.cform textarea{font:inherit;font-size:16px;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);width:100%}
+.cform input:focus,.cform textarea:focus{outline:2px solid var(--ember);outline-offset:1px;border-color:var(--ember)}
+.cform .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.cform .chips label{display:flex;align-items:center;gap:6px;font-size:14px;font-weight:600;letter-spacing:0;text-transform:none;border:1.5px solid var(--line);border-radius:99px;padding:7px 12px;cursor:pointer;color:var(--ink)}
+.cform .chips label:has(input:checked){border-color:var(--ember);background:#FBE7DE}
+.cform .chips input{accent-color:var(--ember)}
+.cform .btn{justify-self:start;background:var(--ink)}
+.cform .fmsg{font-size:14.5px;color:var(--ink-2);min-height:1em}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.plan{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:30px;display:flex;flex-direction:column;gap:10px;position:relative}
+.plan.feat{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.plan .pop{position:absolute;top:-12px;left:30px;background:var(--ember);color:#fff;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:99px}
+.plan .len{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ember)}.plan.feat .len{color:var(--gold)}
+.plan h3{font-size:26px}.plan.feat h3{color:var(--white)}
+.plan .price{font-size:16px;color:var(--ink-2)}.plan.feat .price{color:#C9C1B2}
+.plan .price b{font-family:var(--serif);font-weight:400;font-size:48px;color:var(--ink);letter-spacing:-.02em}.plan.feat .price b{color:var(--white)}
+.plan ul{list-style:none;display:grid;align-content:start;gap:8px;margin:8px 0 14px;font-size:15px;color:var(--ink-2);flex:1}.plan.feat ul{color:#D6CEBF}
+.plan li{padding-left:22px;position:relative}.plan li::before{content:"✓";position:absolute;left:0;color:var(--ember);font-weight:700}
+.plan .btn{justify-content:center}.plan.feat .btn{background:var(--gold);color:var(--ink)}.plan.feat .btn:hover{background:var(--white)}
+.plan .small{font-size:12.5px;color:var(--muted);text-align:center}
+@media (max-width:900px){.plans{grid-template-columns:1fr}}
+.toast{position:fixed;left:50%;bottom:max(24px,env(safe-area-inset-bottom,0px));translate:-50% 0;background:var(--ink);color:var(--paper);padding:14px 20px;border-radius:12px;font-size:15px;box-shadow:0 18px 40px -16px rgba(0,0,0,.5);z-index:100;max-width:calc(100% - 32px)}
+.addons{display:grid;gap:14px}
+.addon{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:22px 26px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+.addon h3{font-size:21px}.addon p{font-size:15px;color:var(--ink-2);max-width:620px;margin-top:4px}
+.addon .ar{display:flex;align-items:center;gap:14px;flex:none}.addon .ar b{font-family:var(--serif);font-weight:400;font-size:30px}.addon .ar span{font-size:13px;color:var(--muted);width:70px}
+@media (max-width:700px){.addon{flex-direction:column;align-items:flex-start}.addon .ar{flex-wrap:wrap}}
+#packages .addon .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}#packages .addon .btn.ghost:hover{background:var(--ink);color:var(--paper)}
 </style>
 </head>
 <body>
 
 <nav class="nav">
   <div class="wrap">
-    <a class="logo" href="index.html"><span class="logo-mark"></span>Erco Media</a>
-    <ul class="nav-links">
-      <li><a href="#work">Work</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#process">Process</a></li>
-      <li><a href="#about">About</a></li>
-    </ul>
-    <a class="btn" href="#contact">Start a project</a>
+    <a class="logo" href="index.html"><span class="logo-mark"></span>Bridges</a>
+    <ul class="nav-links"><li><a href="index.html" class="on">Social Media</a></li><li><a href="web.html">Websites</a></li><li><a href="logos.html">Logos</a></li><li><a href="ai.html">AI Consulting</a></li><li><a href="contact.html">Contact</a></li></ul>
+    <a class="btn" href="#packages">See packages</a>
   </div>
 </nav>
 
@@ -59,17 +145,21 @@
   <div class="wrap">
     <span class="eyebrow">Digital media for churches</span>
     <h1>Telling the story of what God is doing in your church, <em class="ital">one post at a time.</em></h1>
-    <p class="lede">Erco Media helps churches show up online with content that feels fresh, honest, and unmistakably theirs. We handle social strategy, reels and carousels, Sunday screen media, and the volunteer teams who capture it all.</p>
+    <p class="lede">Bridges helps churches show up online with content that feels fresh, honest, and unmistakably theirs. We handle social strategy, reels and carousels, Sunday screen media, and the volunteer teams who capture it all.</p>
     <div class="hero-row">
       <a class="btn" href="#work">See the work</a>
       <a class="btn ghost" href="#services">What we do</a>
     </div>
 
     <div class="hero-strip" aria-hidden="true">
-      <div class="tile"><div class="art-unhurried"><span class="sun"></span><span class="hz"></span><span class="t">Unhurried</span><small>A series on rest</small></div></div>
-      <div class="tile"><div class="art-rooted"><svg viewBox="0 0 200 250" preserveAspectRatio="none"><path d="M100 0 V120 M100 120 C80 160 40 170 20 250 M100 120 C120 170 160 180 185 250 M100 140 C95 190 70 210 60 250 M100 150 C110 200 130 220 135 250" stroke="#C9A24A" fill="none" stroke-width="1.5"/></svg><span class="t">ROOTED</span><small>Sunday series</small></div></div>
-      <div class="tile"><div class="art-strategy"><small>Reach, 20s–30s</small><div class="bars"><i style="height:30%"></i><i style="height:42%"></i><i style="height:38%"></i><i style="height:60%"></i><i class="hi" style="height:92%"></i></div><span class="t">A 90-day plan</span></div></div>
-      <div class="tile"><div class="art-capture"><div class="sheet"><b>Shot list</b><div class="row"><span class="box on"></span>Wide of room, worship</div><div class="row"><span class="box on"></span>Baptism candid</div><div class="row"><span class="box"></span>Kids check-in</div><div class="row"><span class="box"></span>Greeters, golden hour</div></div></div></div>
+      <div class="tile"><div class="art art-unhurried"><div class="archframe"><span class="ring"></span><div class="archwin"></div></div><div class="txt" style="display:contents"><span class="k">A series on rest</span><span class="t">Unhurried</span><span class="ref">Matthew 11:28</span></div></div></div>
+      <div class="tile"><div class="art art-rooted"><svg viewBox="0 0 200 250" preserveAspectRatio="none"><path d="M100 0 V120 M84 46 H116 M100 120 C80 160 40 170 20 250 M100 120 C120 170 160 180 185 250 M100 140 C95 190 70 210 60 250 M100 150 C110 200 130 220 135 250" stroke="#C9A24A" fill="none" stroke-width="1.5"/></svg><span class="t">ROOTED</span><small>Sunday series</small></div></div>
+      <div class="tile"><div class="art art-strategy"><span class="t"><span class="q">“</span>From bulletin board to <span class="brush">front porch.</span></span><small><span>Social strategy</span><span>90 days</span></small></div></div>
+      <div class="tile"><div class="art art-capture grain"><img class="ph" src="img/worship1.jpg" alt="" style="filter:blur(9px) saturate(1.25) brightness(.8);transform:scale(1.15)"><div class="t"><span class="up">Every</span> <span class="dn sm">good</span> <span>moment,</span> <span class="up">captured.</span></div></div></div>
+      <div class="tile"><div class="art art-faces grain"><div class="fr"><img class="ph bw" src="img/p52.jpg" alt=""><i>01A</i></div><div class="fr"><img class="ph bw" src="img/p45.jpg" alt=""><i>02A</i></div><div class="fr"><img class="ph bw" src="img/p48.jpg" alt=""><i>03A</i></div><div class="fr"><img class="ph bw" src="img/p42.jpg" alt=""><i>04A</i></div><div class="fr pick"><img class="ph bw" src="img/p59.jpg" alt=""><i>05A</i></div><div class="fr"><img class="ph bw" src="img/p44.jpg" alt=""><i>06A</i></div><span class="t">Faces of Hollow Creek · Roll 03</span></div></div>
+      <div class="tile"><div class="art art-shorts"><span class="t">One sermon. <mark>Six</mark> clips.</span><span class="phone"><img class="ph" src="img/preach2.jpg" alt="" style="border-radius:2.8cqw"></span><div class="bar"><span class="play"></span>0:58 · Shorts</div></div></div>
+      <div class="tile"><div class="art art-camp grain"><div class="sun"></div><div><span class="t">Wildfire</span><br><small>Student camp · June</small></div></div></div>
+      <div class="tile"><div class="art art-advent"><b>Advent<span>.</span></b><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i><i>10</i><i>11</i><i>12</i><i>13</i><i>14</i><i>15</i><i>16</i><i>17</i><i>18</i><i>19</i><i>20</i><i>21</i><i>22</i><i>23</i><i class=on>24</i><i>25</i></div></div>
     </div>
   </div>
 </header>
@@ -81,44 +171,80 @@
         <span class="eyebrow">Selected work</span>
         <h2>Portfolio</h2>
       </div>
-      <p>Concept projects for fictional churches. Each one shows the full process, from strategy to the finished posts, screens, and systems.</p>
+      <p>Concept projects. Each one shows the full process, from strategy to the finished posts, screens, and systems.</p>
     </div>
 
     <div class="work-grid">
       <a class="card" href="unhurried.html">
-        <div class="thumb"><div class="art-unhurried"><span class="sun"></span><span class="hz"></span><span class="t">Unhurried</span><small>A series on rest</small></div></div>
+        <div class="thumb"><div class="art art-unhurried"><div class="archframe"><span class="ring"></span><div class="archwin"></div></div><div class="txt"><span class="k">A series on rest</span><span class="t">Unhurried</span><span class="ref">Matthew 11:28</span></div></div></div>
         <div class="body">
           <div class="tags"><span class="tag">Reels</span><span class="tag">Carousels</span><span class="tag">Content calendar</span></div>
           <h3>Unhurried: a sermon series social campaign</h3>
           <p>A four-week Instagram, Facebook and YouTube rollout for a series on Sabbath rest, built for people in their 20s and 30s.</p>
-          <p class="client">Lanternfield Church · fictional client</p>
+          <p class="client">Lanternfield Church</p>
         </div>
       </a>
       <a class="card" href="rooted.html">
-        <div class="thumb"><div class="art-rooted"><svg viewBox="0 0 200 250" preserveAspectRatio="none"><path d="M100 0 V120 M100 120 C80 160 40 170 20 250 M100 120 C120 170 160 180 185 250 M100 140 C95 190 70 210 60 250 M100 150 C110 200 130 220 135 250" stroke="#C9A24A" fill="none" stroke-width="1.5"/></svg><span class="t">ROOTED</span><small>Sunday series</small></div></div>
+        <div class="thumb"><div class="art art-rooted"><svg viewBox="0 0 200 250" preserveAspectRatio="none"><path d="M100 0 V120 M84 46 H116 M100 120 C80 160 40 170 20 250 M100 120 C120 170 160 180 185 250 M100 140 C95 190 70 210 60 250 M100 150 C110 200 130 220 135 250" stroke="#C9A24A" fill="none" stroke-width="1.5"/></svg><span class="t">ROOTED</span><small>Sunday series</small></div></div>
         <div class="body">
           <div class="tags"><span class="tag">Pre-roll</span><span class="tag">Countdown</span><span class="tag">Video wall</span></div>
           <h3>Rooted: a Sunday media pack</h3>
           <p>Pre-roll, a live countdown, video wall loops, lower thirds and announcement slides, all from one system.</p>
-          <p class="client">Cedarline Church · fictional client</p>
+          <p class="client">Cedarline Church</p>
         </div>
       </a>
       <a class="card" href="northvale-strategy.html">
-        <div class="thumb"><div class="art-strategy"><small>Reach, 20s–30s</small><div class="bars"><i style="height:30%"></i><i style="height:42%"></i><i style="height:38%"></i><i style="height:60%"></i><i class="hi" style="height:92%"></i></div><span class="t">A 90-day plan to reach the next generation</span></div></div>
+        <div class="thumb"><div class="art art-strategy"><span class="t"><span class="q">“</span>From bulletin board to <span class="brush">front porch.</span></span><small><span>Social strategy</span><span>90 days</span></small></div></div>
         <div class="body">
           <div class="tags"><span class="tag">Audit</span><span class="tag">Strategy</span><span class="tag">Analytics</span></div>
           <h3>Northvale: a social media strategy</h3>
           <p>A channel audit, content pillars, posting rhythm, and a 90-day roadmap with the numbers we'd track.</p>
-          <p class="client">Northvale Fellowship · fictional client</p>
+          <p class="client">Northvale Fellowship</p>
         </div>
       </a>
       <a class="card" href="mesa-grove-capture.html">
-        <div class="thumb"><div class="art-capture"><div class="sheet"><b>Shot list: Easter</b><div class="row"><span class="box on"></span>Wide of room, worship</div><div class="row"><span class="box on"></span>Baptism candid</div><div class="row"><span class="box"></span>Kids check-in</div><div class="row"><span class="box"></span>Greeters, golden hour</div></div></div></div>
+        <div class="thumb"><div class="art art-capture grain"><img class="ph" src="img/worship1.jpg" alt="" style="filter:blur(9px) saturate(1.25) brightness(.8);transform:scale(1.15)"><div class="t"><span class="up">Every</span> <span class="dn sm">good</span> <span>moment,</span> <span class="up">captured.</span></div></div></div>
         <div class="body">
           <div class="tags"><span class="tag">Volunteers</span><span class="tag">Asset library</span><span class="tag">Workflow</span></div>
           <h3>Mesa Grove: a volunteer capture system</h3>
-          <p>Team scheduling, shot lists, a Dropbox library structure, and a hand-off workflow so no good photo gets lost.</p>
-          <p class="client">Mesa Grove Church · fictional client</p>
+          <p>Recruiting posts, team scheduling, shot lists, a Dropbox library and a hand-off workflow so no good photo gets lost.</p>
+          <p class="client">Mesa Grove Church</p>
+        </div>
+      </a>
+      <a class="card" href="hollow-creek-faces.html">
+        <div class="thumb"><div class="art art-faces grain"><div class="fr"><img class="ph bw" src="img/p52.jpg" alt=""><i>01A</i></div><div class="fr"><img class="ph bw" src="img/p45.jpg" alt=""><i>02A</i></div><div class="fr"><img class="ph bw" src="img/p48.jpg" alt=""><i>03A</i></div><div class="fr"><img class="ph bw" src="img/p42.jpg" alt=""><i>04A</i></div><div class="fr"><img class="ph bw" src="img/p59.jpg" alt=""><i>05A</i></div><div class="fr"><img class="ph bw" src="img/p44.jpg" alt=""><i>06A</i></div><div class="fr pick"><img class="ph bw" src="img/p55.jpg" alt=""><i>07A</i></div><div class="fr"><img class="ph bw" src="img/jordan.jpg" alt=""><i>08A</i></div><div class="fr"><img class="ph bw" src="img/p46.jpg" alt=""><i>09A</i></div><div class="fr"><img class="ph bw" src="img/p53.jpg" alt=""><i>10A</i></div><span class="t">Faces of Hollow Creek · Roll 03</span></div></div>
+        <div class="body">
+          <div class="tags"><span class="tag">Photography</span><span class="tag">Testimonies</span><span class="tag">Campus displays</span></div>
+          <h3>Faces of Hollow Creek: a photo story series</h3>
+          <p>Portrait sessions and short testimonies, edited into posts, a lobby display wall and a reusable Lightroom look.</p>
+          <p class="client">Hollow Creek Church</p>
+        </div>
+      </a>
+      <a class="card" href="pinecrest-shorts.html">
+        <div class="thumb"><div class="art art-shorts"><span class="t">One sermon. <mark>Six</mark> clips.</span><span class="phone"><img class="ph" src="img/preach2.jpg" alt="" style="border-radius:2.8cqw"></span><div class="bar"><span class="play"></span>0:58 · Shorts</div></div></div>
+        <div class="body">
+          <div class="tags"><span class="tag">Sermon clips</span><span class="tag">YouTube</span><span class="tag">Pulpit AI</span></div>
+          <h3>Pinecrest: from Sunday sermon to Shorts</h3>
+          <p>A weekly system that turns one sermon into six clips, with thumbnails people actually click.</p>
+          <p class="client">Pinecrest Church</p>
+        </div>
+      </a>
+      <a class="card" href="wildfire-camp.html">
+        <div class="thumb"><div class="art art-camp grain"><div class="sun"></div><div><span class="t">Wildfire</span><br><small>Student camp · June</small></div></div></div>
+        <div class="body">
+          <div class="tags"><span class="tag">Event promo</span><span class="tag">Students</span><span class="tag">Merch</span></div>
+          <h3>Wildfire: a student camp campaign</h3>
+          <p>A retro summer camp look across sign-up posts, a promo reel, a parent info card and camp shirts.</p>
+          <p class="client">Ridgeview Students</p>
+        </div>
+      </a>
+      <a class="card" href="brookhollow-advent.html">
+        <div class="thumb"><div class="art art-advent"><b>Advent<span>.</span></b><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i><i>10</i><i>11</i><i>12</i><i>13</i><i>14</i><i>15</i><i>16</i><i>17</i><i>18</i><i>19</i><i>20</i><i>21</i><i>22</i><i>23</i><i class=on>24</i><i>25</i></div></div>
+        <div class="body">
+          <div class="tags"><span class="tag">Seasonal</span><span class="tag">Daily posts</span><span class="tag">Stories</span></div>
+          <h3>Advent: 25 days of posts</h3>
+          <p>A clean, gridded daily devotional series for December, with stories, a reading plan and Christmas Eve invites.</p>
+          <p class="client">Brookhollow Church</p>
         </div>
       </a>
     </div>
@@ -140,64 +266,41 @@
       <div class="svc"><span class="num">03</span><h3>Community care</h3><p>Real replies to comments and DMs, so people online are met by a person, not silence.</p><ul><li>Response guides</li><li>Prayer request routing</li><li>Weekly engagement time</li></ul></div>
       <div class="svc"><span class="num">04</span><h3>Ministry storytelling</h3><p>We work with ministry leaders to find the stories worth telling, then plan how to capture them.</p><ul><li>Ministry check-ins</li><li>Testimony interviews</li><li>Event coverage plans</li></ul></div>
       <div class="svc"><span class="num">05</span><h3>Sunday media</h3><p>Weekly pre-roll, countdowns and video wall content that sets the tone before the first song.</p><ul><li>Series packages</li><li>Countdown timers</li><li>Lower thirds and slides</li></ul></div>
-      <div class="svc"><span class="num">06</span><h3>Volunteers and assets</h3><p>We recruit, schedule and train photo and video volunteers, and keep every file findable.</p><ul><li>Shot lists and schedules</li><li>Dropbox library setup</li><li>Imagery for campus displays</li></ul></div>
+      <div class="svc"><span class="num">06</span><h3>Volunteers and assets</h3><p>We recruit, schedule and train photo and video volunteers in Planning Center, and keep every file findable.</p><ul><li>Planning Center scheduling</li><li>Shot lists and call times</li><li>Dropbox library setup</li><li>Imagery for campus displays</li></ul></div>
+      <div class="svc svc-ai"><div><span class="num">07</span><h3>Coordinator coaching</h3><p class="tag-ai">Bi-weekly Zoom sessions</p><p>Every two weeks, your communications coordinator meets with us for a focused 45-minute Zoom call. We look at what worked, plan the next two weeks, and give honest feedback, so your coordinator keeps growing without needing a full agency.</p></div>
+        <div class="ai-cols"><div><b>Each session</b><ul><li>Review the last two weeks of posts and numbers</li><li>Plan the next two weeks together</li><li>Feedback on drafts and designs</li></ul></div><div><b>Between sessions</b><ul><li>A shared notes doc and action list</li><li>Quick questions by message</li><li>Templates and resources as needed</li></ul></div><div><b>Who it's for</b><ul><li>New or part-time coordinators</li><li>Staff who inherited social media</li><li>Volunteers leading a media team</li></ul></div></div></div>
     </div>
   </div>
 </section>
 
-<section id="process">
+
+
+
+<section id="packages" class="contact" style="background:var(--paper-2);color:var(--ink)">
   <div class="wrap">
-    <div class="sec-head">
-      <div>
-        <span class="eyebrow">Process</span>
-        <h2>How a project runs</h2>
-      </div>
-    </div>
-    <div class="steps">
-      <div class="step"><b>1</b><h3>Listen</h3><p>We meet with your staff and ministry leaders to learn your voice, your people and what's coming up.</p></div>
-      <div class="step"><b>2</b><h3>Plan</h3><p>A content calendar, shot lists and a capture schedule, shared in Monday.com so everyone can see it.</p></div>
-      <div class="step"><b>3</b><h3>Make</h3><p>Shoot, edit and design in Premiere, Lightroom, Photoshop and Canva, then schedule in Metricool.</p></div>
-      <div class="step"><b>4</b><h3>Learn</h3><p>Monthly reviews of what worked and what didn't, so each month's content is better than the last.</p></div>
-    </div>
+    <div class="sec-head"><div><span class="eyebrow">Social media packages</span><h2>Pick a package. <em class="ital">We'll take it from there.</em></h2></div><p>Simple monthly pricing with no setup fees. Your first week starts with a needs assessment so everything fits your church from day one.</p></div>
+    <div class="plans"><div class="plan"><span class="len">Small churches</span><h3>Social Essentials</h3><p class="price"><b>$700</b>/month</p><ul><li>3 posts and carousels a week</li><li>2 reels or sermon clips a month</li><li>Instagram and Facebook</li><li>Comment and DM replies twice a week</li><li>Quarterly strategy plan</li><li>Monthly analytics report</li></ul><button class="btn buy" type="button" data-plan="essentials">Subscribe</button><span class="small">Billed monthly · No setup fee</span></div><div class="plan"><span class="len">Mid-size churches</span><h3>Sunday + Social</h3><p class="price"><b>$1,200</b>/month</p><ul><li>4 posts and carousels a week</li><li>A reel or sermon clip every week</li><li>Instagram, Facebook and YouTube</li><li>Weekday comment and DM replies</li><li>Weekly Sunday media, series packs included</li><li>Monthly ministry check-in and Zoom</li></ul><button class="btn buy" type="button" data-plan="sunday">Subscribe</button><span class="small">Billed monthly · No setup fee</span></div><div class="plan feat"><span class="pop">Most complete</span><span class="len">Replaces a part-time media hire</span><h3>Ministry Partner</h3><p class="price"><b>$1,900</b>/month</p><ul><li>5+ posts and carousels a week</li><li>2–3 reels or sermon clips a week</li><li>Weekday and Sunday replies from a credentialed minister</li><li>Weekly Sunday media, series packs included</li><li>Planning Center volunteer scheduling</li><li>Photo library, campus displays and comms projects</li><li>Bi-weekly ministry check-ins and Zoom</li></ul><button class="btn buy" type="button" data-plan="partner">Subscribe</button><span class="small">Billed monthly · No setup fee</span></div></div>
+    <h3 style="font-size:24px;margin:56px 0 16px">Add-ons for any package</h3>
+    <div class="addons"><div class="addon"><div><h3>Sermon series pack</h3><p>Pre-roll, countdown, two or three slide layouts and a social set for one series. Two rounds of edits. Included in Sunday + Social and Ministry Partner.</p></div><div class="ar"><b>$300</b><span>per series</span><button class="btn ghost buy" type="button" data-plan="series">Buy now</button></div></div><div class="addon"><div><h3>AI Starter</h3><p>Church voice and guardrails Claude Skills, a plain-language AI policy and one staff training. $500 with Sunday + Social, free with Ministry Partner. See <a href="ai.html">AI Consulting</a> for workshops and full rollouts.</p></div><div class="ar"><b>$750</b><span>one-time</span><button class="btn ghost buy" type="button" data-plan="ai">Buy now</button></div></div><div class="addon"><div><h3>On-site event coverage</h3><p>Photo and video coverage for an event in the Waco area. Choose the number of hours at checkout.</p></div><div class="ar"><b>$50</b><span>per hour</span><button class="btn ghost buy" type="button" data-plan="event">Book hours</button></div></div></div>
+    <p class="note" style="margin-top:16px">No setup fees. Week 1 is a needs assessment. Monthly packages have a six-month minimum, then continue month to month. Websites, logos and AI consulting have their own packages on those tabs.</p>
   </div>
 </section>
 
-<section style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-head"><div><span class="eyebrow">Toolkit</span><h2>Tools we work in</h2></div></div>
-    <div class="tools">
-      <span class="tool">Adobe Premiere</span><span class="tool">Photoshop</span><span class="tool">Lightroom</span><span class="tool">Canva</span><span class="tool">Metricool</span><span class="tool">Meta Business Suite</span><span class="tool">Monday.com</span><span class="tool">Subsplash</span><span class="tool">Pulpit AI</span><span class="tool">Dropbox</span><span class="tool">ProPresenter</span>
-    </div>
-  </div>
-</section>
-
-<section id="about" style="background:var(--paper-2)">
-  <div class="wrap two" style="align-items:center">
-    <div>
-      <span class="eyebrow">About</span>
-      <h2 style="margin-top:12px">Media made by people who love the local church</h2>
-    </div>
-    <div>
-      <p class="lede">Erco Media is a small studio run by Keith Pace. We believe a church's online presence should sound like the people in its building, and that the best content comes from paying attention to what is already happening on a Sunday morning.</p>
-      <p style="margin-top:16px;color:var(--ink-2)">We work with communications teams of every size, from a single staff member to a full department, and we're happy to plug into the systems you already use.</p>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="contact">
-  <div class="wrap">
-    <h2>Have a series, an event, or a feed that needs some life?</h2>
-    <p class="lede" style="color:#FFE9DE;margin:20px 0 32px">Tell us what's coming up and we'll send back a plan.</p>
-    <a class="btn" href="#contact">Contact details coming soon</a>
-  </div>
-</section>
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Erco Media</span>
-    <p class="disclaimer">All portfolio projects are concept work for fictional churches. Any resemblance to a real church is unintended.</p>
+    <span>© 2026 Bridges</span>
   </div>
 </footer>
 
+<script>
+(function(){
+  /* Paste each Stripe Payment Link here once it exists, e.g. "https://buy.stripe.com/abc123" */
+  var LINKS={essentials:"",sunday:"",partner:"",series:"",ai:"",event:""};
+  var t;function toast(msg){var d=document.querySelector('.toast');if(!d){d=document.createElement('div');d.className='toast';d.setAttribute('role','status');document.body.appendChild(d);}d.textContent=msg;d.hidden=false;clearTimeout(t);t=setTimeout(function(){d.hidden=true},4000);}
+  document.querySelectorAll('.buy').forEach(function(b){b.addEventListener('click',function(){var u=LINKS[b.dataset.plan];if(u){window.location.href=u;}else{toast('Online checkout is almost ready. Please check back soon.');}});});
+})();
+</script>
+<script>(function(){try{history.scrollRestoration="manual"}catch(e){}function top(){if(!location.hash)window.scrollTo(0,0)}top();setTimeout(top,80);addEventListener("load",function(){top();setTimeout(top,80)});addEventListener("pageshow",top);})();</script>
 </body>
 </html>

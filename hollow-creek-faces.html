@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Faces of Hollow Creek — Bridges</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter+Tight:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;600&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Shrikhand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+
+:root{--blk:#141414;--pap:#F4F2ED;--red:#E2382B;--mono:"IBM Plex Mono",ui-monospace,monospace}
+.pt{position:relative;background:radial-gradient(ellipse 30% 23% at 50% 38%,#c9c9c9 0 60%,transparent 62%),radial-gradient(ellipse 58% 36% at 50% 100%,#9c9c9c 0 70%,transparent 72%),linear-gradient(#5d5d5d,#262626)}
+.pt.b{background:radial-gradient(ellipse 27% 21% at 40% 40%,#d6d6d6 0 60%,transparent 62%),radial-gradient(ellipse 52% 36% at 38% 100%,#8a8a8a 0 70%,transparent 72%),linear-gradient(#7a7a7a,#3a3a3a)}
+.pt.c{background:radial-gradient(ellipse 29% 22% at 62% 36%,#ababab 0 60%,transparent 62%),radial-gradient(ellipse 56% 38% at 64% 100%,#707070 0 70%,transparent 72%),linear-gradient(#4b4b4b,#1d1d1d)}
+.pt.d{background:radial-gradient(ellipse 22% 17% at 35% 42%,#c4c4c4 0 60%,transparent 62%),radial-gradient(ellipse 22% 17% at 66% 40%,#b4b4b4 0 60%,transparent 62%),radial-gradient(ellipse 70% 34% at 50% 100%,#8b8b8b 0 70%,transparent 72%),linear-gradient(#686868,#2b2b2b)}
+.sheet-dark{background:var(--blk);border-radius:var(--r);padding:28px;color:#EDEDED;font-family:var(--mono)}
+.contact{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.contact .pt{aspect-ratio:3/4}
+.contact .pt i{z-index:2;position:absolute;left:6px;bottom:4px;font-style:normal;font-size:11px;color:#E9E2C9}
+.contact .pick{outline:3px solid var(--red);outline-offset:3px;border-radius:30%}
+.contact .x::after{content:"✕";position:absolute;inset:0;display:grid;place-items:center;color:var(--red);font-size:42px;font-family:var(--sans)}
+.sheet-dark .cap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12.5px;margin-top:18px;color:#A9A9A9}
+@media (max-width:700px){.contact{grid-template-columns:repeat(3,1fr)}}
+.story{width:300px;aspect-ratio:4/5;border-radius:6px;overflow:hidden;position:relative;flex:none;color:#fff;font-family:var(--mono)}
+.story .pt{position:absolute;inset:0}
+.story .ov{position:absolute;inset:auto 0 0 0;padding:22px;background:linear-gradient(transparent,rgba(0,0,0,.85) 40%)}
+.story q{display:block;font-size:17px;line-height:1.35;quotes:"“" "”"}
+.story .nm{display:block;margin-top:10px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#E9E2C9}
+.story.paper{background:var(--pap);color:var(--blk);padding:24px;display:flex;flex-direction:column}
+.story.paper p{font-size:15px;line-height:1.55}
+.story.paper .red{color:var(--red)}
+.story .tag2{position:absolute;top:14px;left:16px;font-size:11px;letter-spacing:.14em;background:var(--red);color:#fff;padding:3px 8px}
+.wall{background:#D9D4CB;border-radius:var(--r);padding:48px 32px 32px;display:grid;grid-template-columns:repeat(4,1fr);gap:22px;position:relative}
+.wall .frame{background:#fff;padding:10px 10px 26px;box-shadow:0 14px 22px -14px rgba(0,0,0,.45)}
+.wall .frame .pt{aspect-ratio:4/5}
+.wall .frame span{display:block;font-family:var(--mono);font-size:10.5px;margin-top:8px;color:#333}
+.wall .plaque{grid-column:1/-1;justify-self:center;background:var(--blk);color:#EDEDED;font-family:var(--mono);font-size:13px;padding:10px 18px;letter-spacing:.06em}
+@media (max-width:700px){.wall{grid-template-columns:1fr 1fr;padding:24px 16px}}
+.ba{position:relative;aspect-ratio:16/9;border-radius:var(--r);overflow:hidden}
+.ba .pt{position:absolute;inset:0}
+.ba .after{filter:grayscale(1) contrast(1.3) brightness(.95)}
+.ba .before{clip-path:inset(0 50% 0 0)}
+.ba .lbl{position:absolute;top:12px;font-family:var(--mono);font-size:12px;background:rgba(0,0,0,.6);color:#fff;padding:3px 8px;z-index:6}
+.ba .div{position:absolute;top:0;bottom:0;left:50%;width:2px;background:#fff;z-index:6}
+.mono{font-family:var(--mono)}
+
+</style>
+</head>
+<body>
+<nav class="nav"><div class="wrap"><a class="logo" href="index.html"><span class="logo-mark"></span>Bridges</a><ul class="nav-links"><li><a href="index.html" class="on">Social Media</a></li><li><a href="web.html">Websites</a></li><li><a href="logos.html">Logos</a></li><li><a href="ai.html">AI Consulting</a></li><li><a href="contact.html">Contact</a></li></ul><a class="btn" href="index.html#packages">See packages</a></div></nav>
+
+<header class="case-hero">
+  <div class="wrap">
+    <a class="back" href="index.html#work">← All work</a>
+    <div class="eyebrow" style="margin-top:28px">Photography and storytelling</div>
+    <h1>Faces of Hollow Creek</h1>
+    <p class="lede">A black and white portrait and testimony series. Twelve people, five questions, and one month of posts, plus a printed display wall for the church lobby.</p>
+    <span class="concept-badge">Concept project</span>
+    <div class="meta"><div><span>Client</span>Hollow Creek Church</div><div><span>Platforms</span>Instagram, Facebook, lobby</div><div><span>Deliverables</span>Portraits, carousels, prints</div><div><span>Tools</span>Lightroom, Photoshop</div></div>
+  </div>
+</header>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-head"><h2>The idea</h2><p>Every church is full of stories nobody has heard. Over one month we photographed twelve people and asked each of them the same five questions. The look is documentary: black and white, real light, no posing, and plain typewriter-style text so the words feel like a note, not an ad.</p></div>
+    <div class="three">
+<div class="panel"><h3>Photograph</h3><p>Twenty-minute portrait sessions in places that matter to each person: their kitchen, their workshop, the pew where they sit.</p></div>
+<div class="panel"><h3>Listen</h3><p>A short recorded interview using the same five questions, so the stories can be compared and grouped later.</p></div>
+<div class="panel"><h3>Share</h3><p>One story a week on Instagram and Facebook, with the full set printed for a lobby display.</p></div></div>
+  </div>
+</section>
+
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-head"><h2>Story posts</h2><p>Each person gets a three-slide carousel: the portrait with one line, the longer story, and an invitation. Captions stay in their own words, edited only for length.</p></div>
+    <div class="scroller">
+<div class="story grain"><img class="ph bw" src="img/p52.jpg" alt=""><span class="tag2">FACES OF HOLLOW CREEK</span><div class="ov"><q>I walked in angry at God. Nobody asked me to fix that first.</q><span class="nm">Marcus, 31 · Greeter</span></div></div>
+<div class="story paper"><span class="mono" style="font-size:11px;letter-spacing:.14em">02 / 03</span><p style="margin-top:auto">"My wife had just left. I came because the building had a light on at 7 am on a Tuesday. A guy named Ray was making coffee and he just handed me a cup and sat down."</p><p style="margin-top:14px">"That was four years ago. Now I'm the one making the coffee."</p></div>
+<div class="story paper"><span class="mono" style="font-size:11px;letter-spacing:.14em">03 / 03</span><p style="margin-top:auto;font-size:26px;line-height:1.15">Every face here has a story.</p><p class="red" style="margin-top:12px">Hear more on Sundays at 9 &amp; 11.</p></div>
+<div class="story grain"><img class="ph bw" src="img/p45.jpg" alt=""><span class="tag2">FACES OF HOLLOW CREEK</span><div class="ov"><q>I've taught three-year-olds for twenty-two years. They taught me more.</q><span class="nm">Doris, 74 · Preschool teacher</span></div></div>
+</div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-head"><h2>Lobby display wall</h2><p>The best sixteen frames get printed at 11 × 14 and hung in the main hallway, with a QR code on the plaque that leads to the full stories in the app.</p></div>
+    <div class="wall"><div class="frame"><div class="pt" style="overflow:hidden"><img class="ph bw" src="img/p52.jpg" alt=""></div><span>MARCUS · GREETER</span></div><div class="frame"><div class="pt" style="overflow:hidden"><img class="ph bw" src="img/p45.jpg" alt=""></div><span>DORIS · PRESCHOOL</span></div><div class="frame"><div class="pt" style="overflow:hidden"><img class="ph bw" src="img/p69.jpg" alt=""></div><span>LUPE &amp; ROSA · HOSTS</span></div><div class="frame"><div class="pt" style="overflow:hidden"><img class="ph bw" src="img/p42.jpg" alt=""></div><span>ANN · PRAYER TEAM</span></div><div class="frame"><div class="pt" style="overflow:hidden"><img class="ph bw" src="img/p59.jpg" alt=""></div><span>ELENA · WORSHIP</span></div><div class="frame"><div class="pt" style="overflow:hidden"><img class="ph bw" src="img/p48.jpg" alt=""></div><span>JAMES · USHER</span></div><div class="frame"><div class="pt" style="overflow:hidden"><img class="ph bw" src="img/p55.jpg" alt=""></div><span>PRIYA · STUDENTS</span></div><div class="frame"><div class="pt" style="overflow:hidden"><img class="ph bw" src="img/p46.jpg" alt=""></div><span>RUTH · CHOIR</span></div><span class="plaque">FACES OF HOLLOW CREEK · SCAN TO HEAR THEIR STORIES</span></div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-head"><h2>A look you can reuse</h2><p>A Lightroom preset built for the series, so any volunteer can match the look. Original color is on the left, the finished edit on the right.</p></div>
+    <div class="two" style="align-items:center"><div class="ba grain"><img class="ph after" src="img/p47.jpg" alt=""><img class="ph before" src="img/p47.jpg" alt=""><span class="lbl" style="left:12px">ORIGINAL</span><span class="lbl" style="right:12px">HOLLOW CREEK B&amp;W</span><span class="div"></span></div>
+<div class="tbl-wrap"><table class="t mono"><tr><th>Setting</th><th>Value</th></tr><tr><td>Treatment</td><td>Black &amp; White</td></tr><tr><td>Contrast</td><td>+18</td></tr><tr><td>Highlights / Shadows</td><td>−22 / +14</td></tr><tr><td>Clarity</td><td>+12</td></tr><tr><td>Grain amount / size</td><td>22 / 30</td></tr><tr><td>Vignette</td><td>−10</td></tr></table></div></div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-head"><h2>The five questions</h2><p>Same questions, every interview. They are open enough that people tell stories instead of giving answers.</p></div>
+    <div class="panel"><ol style="padding-left:20px;display:grid;gap:8px"><li>How did you first end up at Hollow Creek?</li><li>What was going on in your life at the time?</li><li>Who is someone here who made a difference for you?</li><li>Where do you see God at work right now?</li><li>What would you tell someone walking in for the first time?</li></ol></div>
+  </div>
+</section>
+
+<div class="next-case"><div class="wrap"><a href="pinecrest-shorts.html"><div><span class="eyebrow">Next project</span><h2>Pinecrest: from Sunday sermon to Shorts →</h2></div></a></div></div>
+<footer><div class="wrap"><span>© 2026 Bridges</span></div></footer>
+<script>(function(){try{history.scrollRestoration="manual"}catch(e){}function top(){if(!location.hash)window.scrollTo(0,0)}top();setTimeout(top,80);addEventListener("load",function(){top();setTimeout(top,80)});addEventListener("pageshow",top);})();</script>
+</body>
+</html>
