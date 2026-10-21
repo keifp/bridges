@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Erco Media — Digital Media for Churches</title>
+<meta name="description" content="Erco Media is a church digital media studio: social strategy, reels and carousels, Sunday screen media, photography, and volunteer capture teams.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* thumbnail art */
+.art-unhurried{background:#EDE4D3;display:flex;flex-direction:column;justify-content:flex-end;padding:8%;color:#2F3A2C}
+.art-unhurried .sun{position:absolute;width:46%;aspect-ratio:1;border-radius:50%;background:#E9A15B;top:14%;right:12%}
+.art-unhurried .hz{position:absolute;left:0;right:0;top:46%;height:2px;background:#2F3A2C;opacity:.4}
+.hero-strip .tile,.card .thumb{container-type:inline-size}
+.art-unhurried .t{font-family:var(--serif);font-style:italic;font-size:17cqw;line-height:1;position:relative}
+.art-unhurried small{font-size:12px;letter-spacing:.2em;text-transform:uppercase;position:relative;margin-top:8px}
+
+.art-rooted{background:#18332A;color:#E8D9A8;display:flex;align-items:center;justify-content:center;flex-direction:column}
+.art-rooted .t{font-family:var(--serif);font-size:13cqw;letter-spacing:.28em;padding-left:.28em;position:relative}
+.art-rooted svg{position:absolute;inset:0;width:100%;height:100%;opacity:.45}
+.art-rooted small{position:relative;font-size:12px;letter-spacing:.24em;text-transform:uppercase;opacity:.8;margin-top:10px}
+
+.art-strategy{background:#1E1D1B;color:#F3EFE6;padding:7%;display:flex;flex-direction:column;justify-content:space-between}
+.art-strategy .bars{display:flex;align-items:flex-end;gap:6%;height:55%}
+.art-strategy .bars i{flex:1;background:#3A3833;border-radius:6px 6px 0 0}
+.art-strategy .bars i.hi{background:var(--ember)}
+.art-strategy .t{font-family:var(--serif);font-size:9cqw;line-height:1.1}
+.art-strategy small{color:#9F9789;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+
+.art-capture{background:#B95C3A;padding:7%;display:flex;align-items:center;justify-content:center}
+.art-capture .sheet{background:#FFFDF8;border-radius:10px;width:78%;padding:6%;transform:rotate(-3deg);box-shadow:0 20px 40px -20px rgba(0,0,0,.5);font-size:clamp(9px,1vw,12px);color:#333}
+.art-capture .sheet b{display:block;font-family:var(--serif);font-size:clamp(14px,1.8vw,22px);font-weight:500;margin-bottom:6px;color:#171512}
+.art-capture .row{display:flex;gap:6px;align-items:center;padding:4px 0;border-top:1px solid #eee}
+.art-capture .box{width:10px;height:10px;border:1.5px solid #B95C3A;border-radius:3px;flex:none}
+.art-capture .box.on{background:#B95C3A}
+.hero-strip .tile .art-unhurried,.hero-strip .tile .art-rooted,.hero-strip .tile .art-strategy,.hero-strip .tile .art-capture,
+.card .thumb>div{position:absolute;inset:0}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="logo" href="index.html"><span class="logo-mark"></span>Erco Media</a>
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <a class="btn" href="#contact">Start a project</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Digital media for churches</span>
+    <h1>Telling the story of what God is doing in your church, <em class="ital">one post at a time.</em></h1>
+    <p class="lede">Erco Media helps churches show up online with content that feels fresh, honest, and unmistakably theirs. We handle social strategy, reels and carousels, Sunday screen media, and the volunteer teams who capture it all.</p>
+    <div class="hero-row">
+      <a class="btn" href="#work">See the work</a>
+      <a class="btn ghost" href="#services">What we do</a>
+    </div>
+
+    <div class="hero-strip" aria-hidden="true">
+      <div class="tile"><div class="art-unhurried"><span class="sun"></span><span class="hz"></span><span class="t">Unhurried</span><small>A series on rest</small></div></div>
+      <div class="tile"><div class="art-rooted"><svg viewBox="0 0 200 250" preserveAspectRatio="none"><path d="M100 0 V120 M100 120 C80 160 40 170 20 250 M100 120 C120 170 160 180 185 250 M100 140 C95 190 70 210 60 250 M100 150 C110 200 130 220 135 250" stroke="#C9A24A" fill="none" stroke-width="1.5"/></svg><span class="t">ROOTED</span><small>Sunday series</small></div></div>
+      <div class="tile"><div class="art-strategy"><small>Reach, 20s–30s</small><div class="bars"><i style="height:30%"></i><i style="height:42%"></i><i style="height:38%"></i><i style="height:60%"></i><i class="hi" style="height:92%"></i></div><span class="t">A 90-day plan</span></div></div>
+      <div class="tile"><div class="art-capture"><div class="sheet"><b>Shot list</b><div class="row"><span class="box on"></span>Wide of room, worship</div><div class="row"><span class="box on"></span>Baptism candid</div><div class="row"><span class="box"></span>Kids check-in</div><div class="row"><span class="box"></span>Greeters, golden hour</div></div></div></div>
+    </div>
+  </div>
+</header>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow">Selected work</span>
+        <h2>Portfolio</h2>
+      </div>
+      <p>Concept projects for fictional churches. Each one shows the full process, from strategy to the finished posts, screens, and systems.</p>
+    </div>
+
+    <div class="work-grid">
+      <a class="card" href="unhurried.html">
+        <div class="thumb"><div class="art-unhurried"><span class="sun"></span><span class="hz"></span><span class="t">Unhurried</span><small>A series on rest</small></div></div>
+        <div class="body">
+          <div class="tags"><span class="tag">Reels</span><span class="tag">Carousels</span><span class="tag">Content calendar</span></div>
+          <h3>Unhurried: a sermon series social campaign</h3>
+          <p>A four-week Instagram, Facebook and YouTube rollout for a series on Sabbath rest, built for people in their 20s and 30s.</p>
+          <p class="client">Lanternfield Church · fictional client</p>
+        </div>
+      </a>
+      <a class="card" href="rooted.html">
+        <div class="thumb"><div class="art-rooted"><svg viewBox="0 0 200 250" preserveAspectRatio="none"><path d="M100 0 V120 M100 120 C80 160 40 170 20 250 M100 120 C120 170 160 180 185 250 M100 140 C95 190 70 210 60 250 M100 150 C110 200 130 220 135 250" stroke="#C9A24A" fill="none" stroke-width="1.5"/></svg><span class="t">ROOTED</span><small>Sunday series</small></div></div>
+        <div class="body">
+          <div class="tags"><span class="tag">Pre-roll</span><span class="tag">Countdown</span><span class="tag">Video wall</span></div>
+          <h3>Rooted: a Sunday media pack</h3>
+          <p>Pre-roll, a live countdown, video wall loops, lower thirds and announcement slides, all from one system.</p>
+          <p class="client">Cedarline Church · fictional client</p>
+        </div>
+      </a>
+      <a class="card" href="northvale-strategy.html">
+        <div class="thumb"><div class="art-strategy"><small>Reach, 20s–30s</small><div class="bars"><i style="height:30%"></i><i style="height:42%"></i><i style="height:38%"></i><i style="height:60%"></i><i class="hi" style="height:92%"></i></div><span class="t">A 90-day plan to reach the next generation</span></div></div>
+        <div class="body">
+          <div class="tags"><span class="tag">Audit</span><span class="tag">Strategy</span><span class="tag">Analytics</span></div>
+          <h3>Northvale: a social media strategy</h3>
+          <p>A channel audit, content pillars, posting rhythm, and a 90-day roadmap with the numbers we'd track.</p>
+          <p class="client">Northvale Fellowship · fictional client</p>
+        </div>
+      </a>
+      <a class="card" href="mesa-grove-capture.html">
+        <div class="thumb"><div class="art-capture"><div class="sheet"><b>Shot list: Easter</b><div class="row"><span class="box on"></span>Wide of room, worship</div><div class="row"><span class="box on"></span>Baptism candid</div><div class="row"><span class="box"></span>Kids check-in</div><div class="row"><span class="box"></span>Greeters, golden hour</div></div></div></div>
+        <div class="body">
+          <div class="tags"><span class="tag">Volunteers</span><span class="tag">Asset library</span><span class="tag">Workflow</span></div>
+          <h3>Mesa Grove: a volunteer capture system</h3>
+          <p>Team scheduling, shot lists, a Dropbox library structure, and a hand-off workflow so no good photo gets lost.</p>
+          <p class="client">Mesa Grove Church · fictional client</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow">Services</span>
+        <h2>Everything your comms team needs online</h2>
+      </div>
+      <p>We work alongside your staff and ministries, so everything stays on brand and on mission.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc"><span class="num">01</span><h3>Social strategy</h3><p>A plan that keeps you ahead of trends, algorithms and platform changes, without chasing every fad.</p><ul><li>Channel audits</li><li>Content pillars and rhythm</li><li>Monthly analytics reviews</li></ul></div>
+      <div class="svc"><span class="num">02</span><h3>Original content</h3><p>Reels, carousels and posts that tell the story of what God is doing in your church.</p><ul><li>Short-form video</li><li>Carousels and graphics</li><li>Sermon clips</li></ul></div>
+      <div class="svc"><span class="num">03</span><h3>Community care</h3><p>Real replies to comments and DMs, so people online are met by a person, not silence.</p><ul><li>Response guides</li><li>Prayer request routing</li><li>Weekly engagement time</li></ul></div>
+      <div class="svc"><span class="num">04</span><h3>Ministry storytelling</h3><p>We work with ministry leaders to find the stories worth telling, then plan how to capture them.</p><ul><li>Ministry check-ins</li><li>Testimony interviews</li><li>Event coverage plans</li></ul></div>
+      <div class="svc"><span class="num">05</span><h3>Sunday media</h3><p>Weekly pre-roll, countdowns and video wall content that sets the tone before the first song.</p><ul><li>Series packages</li><li>Countdown timers</li><li>Lower thirds and slides</li></ul></div>
+      <div class="svc"><span class="num">06</span><h3>Volunteers and assets</h3><p>We recruit, schedule and train photo and video volunteers, and keep every file findable.</p><ul><li>Shot lists and schedules</li><li>Dropbox library setup</li><li>Imagery for campus displays</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow">Process</span>
+        <h2>How a project runs</h2>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step"><b>1</b><h3>Listen</h3><p>We meet with your staff and ministry leaders to learn your voice, your people and what's coming up.</p></div>
+      <div class="step"><b>2</b><h3>Plan</h3><p>A content calendar, shot lists and a capture schedule, shared in Monday.com so everyone can see it.</p></div>
+      <div class="step"><b>3</b><h3>Make</h3><p>Shoot, edit and design in Premiere, Lightroom, Photoshop and Canva, then schedule in Metricool.</p></div>
+      <div class="step"><b>4</b><h3>Learn</h3><p>Monthly reviews of what worked and what didn't, so each month's content is better than the last.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div><span class="eyebrow">Toolkit</span><h2>Tools we work in</h2></div></div>
+    <div class="tools">
+      <span class="tool">Adobe Premiere</span><span class="tool">Photoshop</span><span class="tool">Lightroom</span><span class="tool">Canva</span><span class="tool">Metricool</span><span class="tool">Meta Business Suite</span><span class="tool">Monday.com</span><span class="tool">Subsplash</span><span class="tool">Pulpit AI</span><span class="tool">Dropbox</span><span class="tool">ProPresenter</span>
+    </div>
+  </div>
+</section>
+
+<section id="about" style="background:var(--paper-2)">
+  <div class="wrap two" style="align-items:center">
+    <div>
+      <span class="eyebrow">About</span>
+      <h2 style="margin-top:12px">Media made by people who love the local church</h2>
+    </div>
+    <div>
+      <p class="lede">Erco Media is a small studio run by Keith Pace. We believe a church's online presence should sound like the people in its building, and that the best content comes from paying attention to what is already happening on a Sunday morning.</p>
+      <p style="margin-top:16px;color:var(--ink-2)">We work with communications teams of every size, from a single staff member to a full department, and we're happy to plug into the systems you already use.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Have a series, an event, or a feed that needs some life?</h2>
+    <p class="lede" style="color:#FFE9DE;margin:20px 0 32px">Tell us what's coming up and we'll send back a plan.</p>
+    <a class="btn" href="#contact">Contact details coming soon</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Erco Media</span>
+    <p class="disclaimer">All portfolio projects are concept work for fictional churches. Any resemblance to a real church is unintended.</p>
+  </div>
+</footer>
+
+</body>
+</html>

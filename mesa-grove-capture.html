@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mesa Grove Capture — Erco Media</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+:root{--terra:#B95C3A;--sand:#F1E2CF}
+.sheet{background:var(--white);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.sheet-h{background:var(--terra);color:#fff;padding:18px 22px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:end}
+.sheet-h b{font-family:var(--serif);font-weight:500;font-size:24px}
+.sheet-h span{font-size:13px;opacity:.9}
+.shots{list-style:none}
+.shots li{border-top:1px solid var(--line)}
+.shots label{display:flex;gap:14px;padding:12px 22px;cursor:pointer;align-items:flex-start;font-size:15px}
+.shots input{appearance:none;width:20px;height:20px;border:2px solid var(--terra);border-radius:5px;flex:none;margin-top:2px;cursor:pointer;display:grid;place-content:center}
+.shots input:checked{background:var(--terra)}
+.shots input:checked::after{content:"✓";color:#fff;font-size:13px;font-weight:700}
+.shots input:checked + span{color:var(--muted);text-decoration:line-through}
+.shots .pri{margin-left:auto;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;flex:none}
+.pri.must{background:#F7D9CC;color:#8E3A1E}.pri.nice{background:var(--paper-2);color:var(--ink-2)}
+.grp{padding:10px 22px;background:var(--sand);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7A4A2E}
+.prog{padding:14px 22px;font-size:14px;color:var(--ink-2);border-top:1px solid var(--line)}
+.prog .bar{height:6px;background:var(--paper-2);border-radius:6px;margin-top:6px;overflow:hidden}
+.prog .bar i{display:block;height:100%;width:0;background:var(--terra);transition:width .3s}
+
+.tree{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:14px;line-height:1.85;background:#1E1D1B;color:#E9E3D6;border-radius:var(--r);padding:24px 26px;overflow-x:auto;white-space:pre}
+.tree .f{color:#E9C46A}.tree .c{color:#8C857A}
+
+.board{display:grid;grid-template-columns:repeat(5,minmax(190px,1fr));gap:12px;min-width:980px}
+.col{background:var(--paper-2);border-radius:12px;padding:12px}
+.col h4{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;display:flex;justify-content:space-between;margin-bottom:10px}
+.col h4 span{background:var(--white);border-radius:99px;padding:0 8px;font-size:12px}
+.item{background:var(--white);border-radius:9px;padding:10px 12px;margin-bottom:8px;font-size:13.5px;border-left:4px solid var(--c,#999);box-shadow:0 1px 0 rgba(0,0,0,.04)}
+.item small{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+
+.sched td.on{background:#F7D9CC;font-weight:600;color:#8E3A1E;text-align:center}
+.sched td.off{text-align:center;color:#C9C2B5}
+.settings{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.set{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:16px}
+.set span{font-size:12px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.set b{display:block;font-family:var(--serif);font-weight:500;font-size:26px;margin:4px 0}
+.set p{font-size:13.5px;color:var(--ink-2)}
+@media (max-width:820px){.settings{grid-template-columns:1fr 1fr}}
+code.nm{background:var(--paper-2);padding:2px 8px;border-radius:6px;font-size:14px}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="wrap"><a class="logo" href="index.html"><span class="logo-mark"></span>Erco Media</a><ul class="nav-links"><li><a href="index.html#work">Work</a></li><li><a href="index.html#services">Services</a></li><li><a href="index.html#about">About</a></li></ul><a class="btn" href="index.html#contact">Start a project</a></div></nav>
+
+<header class="case-hero">
+  <div class="wrap">
+    <a class="back" href="index.html#work">← All work</a>
+    <div class="eyebrow" style="margin-top:28px">Volunteer capture system</div>
+    <h1>Mesa Grove</h1>
+    <p class="lede">Great moments happen at church every week, and most of them never get captured. This system gives a team of photo and video volunteers a schedule, clear shot lists, simple camera settings, and one place to put every file, so the comms team always has fresh content to work with.</p>
+    <span class="concept-badge">Concept project · Mesa Grove Church and its volunteers are fictional</span>
+    <div class="meta">
+      <div><span>Client</span>Mesa Grove Church</div>
+      <div><span>Team</span>8 photo and video volunteers</div>
+      <div><span>Deliverables</span>Schedule, shot lists, library, workflow</div>
+      <div><span>Tools</span>Monday.com, Dropbox, Lightroom</div>
+    </div>
+  </div>
+</header>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-head"><h2>Team schedule</h2><p>Each volunteer serves about twice a month, with one photo and one video person on every Sunday. Big events get extra people. The schedule lives in Monday.com and sends reminders on Thursday.</p></div>
+    <div class="tbl-wrap"><table class="t sched">
+      <tr><th>Volunteer</th><th>Role</th><th>Nov 1</th><th>Nov 8</th><th>Nov 15</th><th>Nov 22</th><th>Nov 29</th><th>Fall Fest</th></tr>
+      <tr><td>Avery L.</td><td>Photo lead</td><td class="on">9 am</td><td class="off">—</td><td class="on">11 am</td><td class="off">—</td><td class="off">—</td><td class="on">Lead</td></tr>
+      <tr><td>Marcus T.</td><td>Photo</td><td class="off">—</td><td class="on">9 am</td><td class="off">—</td><td class="on">11 am</td><td class="off">—</td><td class="on">Candids</td></tr>
+      <tr><td>Priya S.</td><td>Photo</td><td class="on">11 am</td><td class="off">—</td><td class="off">—</td><td class="off">—</td><td class="on">9 am</td><td class="off">—</td></tr>
+      <tr><td>Eli R.</td><td>Video lead</td><td class="on">9 am</td><td class="off">—</td><td class="on">9 am</td><td class="off">—</td><td class="off">—</td><td class="on">Recap</td></tr>
+      <tr><td>Hannah C.</td><td>Video</td><td class="off">—</td><td class="on">11 am</td><td class="off">—</td><td class="on">9 am</td><td class="off">—</td><td class="off">—</td></tr>
+      <tr><td>Sam O.</td><td>Video, reels</td><td class="off">—</td><td class="off">—</td><td class="on">11 am</td><td class="off">—</td><td class="on">11 am</td><td class="on">Reels</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-head"><h2>Event shot list</h2><p>Every event gets a shot list made with the ministry leader beforehand, split into must-haves and nice-to-haves. Volunteers check shots off on their phone as they go. Try it.</p></div>
+    <div class="two" style="align-items:start">
+      <div class="sheet">
+        <div class="sheet-h"><b>Fall Fest</b><span>Sat · 4–8 pm · Front lawn</span></div>
+        <ul class="shots" id="shots">
+          <li class="grp">Arrival</li>
+          <li><label><input type="checkbox"><span>Wide of the lawn as gates open, golden hour</span><em class="pri must">Must</em></label></li>
+          <li><label><input type="checkbox"><span>Greeters welcoming families at the entrance</span><em class="pri must">Must</em></label></li>
+          <li><label><input type="checkbox"><span>Signage and decorations, detail shots</span><em class="pri nice">Nice</em></label></li>
+          <li class="grp">Activities</li>
+          <li><label><input type="checkbox"><span>Kids at the face-painting booth (only kids with photo consent wristbands)</span><em class="pri must">Must</em></label></li>
+          <li><label><input type="checkbox"><span>Chili cook-off judges, candid reactions</span><em class="pri must">Must</em></label></li>
+          <li><label><input type="checkbox"><span>Hayride, shot from the trailer, 10-sec video</span><em class="pri nice">Nice</em></label></li>
+          <li class="grp">People</li>
+          <li><label><input type="checkbox"><span>Volunteers serving, faces visible</span><em class="pri must">Must</em></label></li>
+          <li><label><input type="checkbox"><span>Pastor talking with guests, not posed</span><em class="pri nice">Nice</em></label></li>
+          <li><label><input type="checkbox"><span>3 vertical clips for a reel: laughter, food, lights</span><em class="pri must">Must</em></label></li>
+        </ul>
+        <div class="prog"><span id="progTxt">0 of 9 shots</span><div class="bar"><i id="progBar"></i></div></div>
+      </div>
+      <div class="panel">
+        <h3>Ground rules for every volunteer</h3>
+        <ul>
+          <li>Never photograph a child without a photo consent wristband.</li>
+          <li>Stay out of the aisle and the front during prayer and communion.</li>
+          <li>Candid beats posed. Shoot people doing things, not looking at you.</li>
+          <li>Get faces. A crowd from behind doesn't tell a story.</li>
+          <li>Shoot both horizontal and vertical for every key moment.</li>
+          <li>Upload everything within 24 hours. Don't cull, we'll do that.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-head"><h2>Camera cheat sheet</h2><p>A one-page card for volunteers with church cameras, so the photos look consistent no matter who's shooting. Phone shooters get a simpler version.</p></div>
+    <div class="settings">
+      <div class="set"><span>Sanctuary</span><b>f/2.8 · 1/250</b><p>Auto ISO up to 6400. No flash, ever.</p></div>
+      <div class="set"><span>Lobby</span><b>f/2.8 · 1/200</b><p>White balance on auto. Watch for mixed light from windows.</p></div>
+      <div class="set"><span>Outdoors</span><b>f/4 · 1/500</b><p>Shoot with the sun behind people, not in their faces.</p></div>
+      <div class="set"><span>Video</span><b>4K · 30 fps</b><p>Hold each shot 10 seconds. Shutter at 1/60.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-head"><h2>The asset library</h2><p>One Dropbox structure for everything, organized by year and then by event. Volunteers only see the upload folders. The comms team handles the edited files and the best-of library that ministries pull from for campus displays.</p></div>
+    <div class="two" style="align-items:start">
+<div class="tree"><span class="f">Mesa Grove Media/</span>
+├── <span class="f">00_Upload/</span>            <span class="c">← volunteers drop files here</span>
+│   ├── <span class="f">2026-11-01_Sunday/</span>
+│   └── <span class="f">2026-11-07_FallFest/</span>
+├── <span class="f">01_Events/</span>
+│   └── <span class="f">2026/</span>
+│       └── <span class="f">2026-11-07_FallFest/</span>
+│           ├── <span class="f">Raw/</span>
+│           ├── <span class="f">Selects/</span>
+│           └── <span class="f">Edited/</span>
+├── <span class="f">02_Sundays/</span>
+├── <span class="f">03_Best-Of/</span>            <span class="c">← approved for displays</span>
+│   ├── <span class="f">Worship/</span>
+│   ├── <span class="f">Kids/</span>
+│   ├── <span class="f">Students/</span>
+│   └── <span class="f">Community/</span>
+├── <span class="f">04_Brand/</span>              <span class="c">← logos, fonts, templates</span>
+└── <span class="f">05_Releases/</span>           <span class="c">← photo consent forms</span></div>
+      <div class="panel">
+        <h3>File naming</h3>
+        <p>Every file is renamed in Lightroom on import, so anyone can find it by date, event and photographer.</p>
+        <p style="margin:14px 0"><code class="nm">2026-11-07_FallFest_AveryL_0142.jpg</code></p>
+        <h3 style="margin-top:22px">Tags we add</h3>
+        <p>Ministry (Kids, Students, Worship), season, and a star rating. Four and five stars go to Best-Of, where they're ready for campus screens, print and social.</p>
+        <h3 style="margin-top:22px">Picking images for displays</h3>
+        <p>Real faces, real moments, good light, and a mix of ages and ministries. No one blinking, no one mid-bite, and no kids without consent.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-head"><h2>Hand-off workflow</h2><p>Every batch of photos and video moves across a Monday.com board, so nothing sits forgotten on a memory card.</p></div>
+    <div style="overflow-x:auto">
+      <div class="board">
+        <div class="col"><h4>Captured <span>2</span></h4><div class="item" style="--c:#B95C3A">Fall Fest photos<small>Avery, Marcus · 640 files</small></div><div class="item" style="--c:#1F4E4A">Fall Fest recap video<small>Eli · 38 clips</small></div></div>
+        <div class="col"><h4>Uploaded <span>1</span></h4><div class="item" style="--c:#B95C3A">Nov 1 Sunday photos<small>Priya · in 00_Upload</small></div></div>
+        <div class="col"><h4>Culled <span>2</span></h4><div class="item" style="--c:#B95C3A">Baptism Sunday<small>58 selects of 410</small></div><div class="item" style="--c:#1F4E4A">Testimony: the Garcias<small>Interview + b-roll</small></div></div>
+        <div class="col"><h4>Edited <span>1</span></h4><div class="item" style="--c:#C9A24A">Kids ministry carousel<small>Ready for review</small></div></div>
+        <div class="col"><h4>Posted / Library <span>2</span></h4><div class="item" style="--c:#C9A24A">Serve Day reel<small>Posted Oct 28</small></div><div class="item" style="--c:#B95C3A">Worship night photos<small>12 to Best-Of</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="next-case"><div class="wrap"><a href="unhurried.html"><div><span class="eyebrow">Next project</span><h2>Unhurried: a sermon series campaign →</h2></div></a></div></div>
+<footer><div class="wrap"><span>© 2026 Erco Media</span><p class="disclaimer">Concept work for a fictional church. Volunteer names are invented.</p></div></footer>
+
+<script>
+(function(){
+  var boxes=document.querySelectorAll('#shots input'),t=document.getElementById('progTxt'),b=document.getElementById('progBar');
+  function up(){var n=0;boxes.forEach(function(x){if(x.checked)n++});t.textContent=n+' of '+boxes.length+' shots';b.style.width=(n/boxes.length*100)+'%';}
+  boxes.forEach(function(x){x.addEventListener('change',up)});up();
+})();
+</script>
+</body>
+</html>

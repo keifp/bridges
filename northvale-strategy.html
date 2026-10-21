@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Northvale Strategy — Erco Media</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.deck{display:grid;gap:28px}
+.ds{aspect-ratio:16/9;border-radius:14px;overflow:hidden;position:relative;background:#1E1D1B;color:#F3EFE6;padding:5cqw;container-type:inline-size;display:flex;flex-direction:column}
+.dsw{container-type:inline-size}
+.ds .n{position:absolute;top:3.2cqw;right:4cqw;font-size:1.3cqw;letter-spacing:.14em;color:#8C857A}
+.ds .k{font-size:1.4cqw;letter-spacing:.2em;text-transform:uppercase;color:var(--ember);font-weight:700}
+.ds h4{font-family:var(--serif);font-weight:400;font-size:4.4cqw;line-height:1.08;letter-spacing:-.02em;margin-top:1.2cqw;max-width:80%}
+.ds .body{margin-top:auto}
+.ds p,.ds li{font-size:1.65cqw;line-height:1.45;color:#CFC8BB}
+.ds.light{background:#FFFDF8;color:#171512;border:1px solid var(--line)}
+.ds.light p,.ds.light li{color:#4A453D}
+.ds.ember{background:var(--ember)}
+.ds.ember .k{color:#FFE0D2}
+.ds.ember p{color:#FFE9DE}
+.cover h4{font-size:7cqw;max-width:90%}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:2cqw}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.6cqw}
+.chan{background:#2A2825;border-radius:1cqw;padding:1.8cqw}
+.chan b{display:block;font-size:1.5cqw;letter-spacing:.1em;text-transform:uppercase;color:#F3EFE6}
+.chan .big{font-family:var(--serif);font-size:4cqw;color:#F3EFE6;line-height:1.1;margin:.6cqw 0}
+.grade{display:inline-block;font-size:1.3cqw;font-weight:700;padding:.3cqw .9cqw;border-radius:99px;margin-top:.6cqw}
+.grade.ok{background:#2F4A3A;color:#9FD2B0}.grade.mid{background:#4A3F22;color:#E9C46A}.grade.low{background:#4A2A22;color:#F0A089}
+.pill{background:#F3EFE6;color:#171512;border-radius:1.2cqw;padding:2cqw}
+.ds.light .pill{background:#F3EFE6}
+.pill b{font-family:var(--serif);font-weight:500;font-size:2.4cqw;display:block;line-height:1.1}
+.pill span{font-size:1.4cqw;color:var(--ember);font-weight:700;letter-spacing:.1em}
+.pill p{font-size:1.45cqw !important;margin-top:.8cqw}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:1cqw;margin-top:2cqw}
+.day{background:#2A2825;border-radius:.8cqw;padding:1.2cqw;min-height:13cqw}
+.day b{font-size:1.3cqw;letter-spacing:.12em;color:#8C857A;display:block;margin-bottom:.6cqw}
+.day i{display:block;font-style:normal;font-size:1.35cqw;padding:.5cqw .7cqw;border-radius:.5cqw;margin-top:.5cqw;color:#171512}
+.road{display:grid;grid-template-columns:repeat(3,1fr);gap:2cqw;margin-top:2.4cqw}
+.road div{border-top:.35cqw solid var(--ember);padding-top:1.4cqw}
+.road b{font-family:var(--serif);font-weight:400;font-size:2.4cqw;display:block}
+.road ul{padding-left:2cqw;margin-top:.8cqw}
+.persona{display:flex;gap:2cqw;align-items:flex-start}
+.persona .av{width:7cqw;height:7cqw;border-radius:50%;flex:none}
+.persona b{font-family:var(--serif);font-weight:500;font-size:2.3cqw;display:block}
+.persona p{font-size:1.45cqw !important}
+.chart text{font-family:var(--sans)}
+.pill p{color:#4A453D !important}
+@media (max-width:700px){
+ .ds{aspect-ratio:auto;padding:24px 20px;min-height:0}
+ .ds .n{font-size:11px;top:16px;right:18px}
+ .ds .k{font-size:11px}
+ .ds h4,.cover h4{font-size:28px;max-width:100%;margin-top:8px}
+ .ds .body{margin-top:22px}
+ .ds p,.ds li{font-size:14.5px}
+ .g3,.g4,.road{grid-template-columns:1fr;gap:12px}
+ .chan{padding:14px;border-radius:10px}.chan b{font-size:12px}.chan .big{font-size:30px}.grade{font-size:11px;padding:3px 9px}
+ .pill{padding:14px;border-radius:10px}.pill b{font-size:20px}.pill span{font-size:12px}.pill p{font-size:14px !important}
+ .week{grid-template-columns:1fr 1fr;gap:8px}.day{min-height:0;padding:10px;border-radius:8px}.day b{font-size:11px}.day i{font-size:13px;padding:4px 8px;border-radius:5px}
+ .road div{border-top-width:3px;padding-top:10px}.road b{font-size:19px}.road ul{padding-left:18px}
+ .persona{gap:12px}.persona .av{width:48px;height:48px}.persona b{font-size:19px}.persona p{font-size:14px !important}
+ .two{gap:18px !important}
+}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="wrap"><a class="logo" href="index.html"><span class="logo-mark"></span>Erco Media</a><ul class="nav-links"><li><a href="index.html#work">Work</a></li><li><a href="index.html#services">Services</a></li><li><a href="index.html#about">About</a></li></ul><a class="btn" href="index.html#contact">Start a project</a></div></nav>
+
+<header class="case-hero">
+  <div class="wrap">
+    <a class="back" href="index.html#work">← All work</a>
+    <div class="eyebrow" style="margin-top:28px">Social media strategy</div>
+    <h1>Northvale</h1>
+    <p class="lede">A strategy deck for a church whose feed was mostly event flyers. It audits each channel, defines who they're trying to reach, sets content pillars and a weekly rhythm, and lays out a 90-day plan with the numbers to watch.</p>
+    <span class="concept-badge">Concept project · Northvale Fellowship is fictional, and all numbers are sample data</span>
+    <div class="meta">
+      <div><span>Client</span>Northvale Fellowship</div>
+      <div><span>Focus</span>Adults in their 20s and 30s</div>
+      <div><span>Deliverables</span>Audit, strategy deck, roadmap</div>
+      <div><span>Tools</span>Metricool, Meta Business Suite</div>
+    </div>
+  </div>
+</header>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-head"><h2>The deck</h2><p>Eight slides we'd walk through with the communications team and senior staff. Scroll through it here the way it would be presented.</p></div>
+    <div class="deck">
+
+      <div class="dsw"><div class="ds cover"><span class="n">01</span><span class="k">Northvale Fellowship · Social strategy</span><h4>From bulletin board to front porch.</h4><div class="body"><p>A 90-day plan to make Northvale's social channels a place people in their 20s and 30s actually want to visit.</p></div></div></div>
+
+      <div class="dsw"><div class="ds"><span class="n">02</span><span class="k">Where we are</span><h4>Channel audit</h4>
+        <div class="body g3">
+          <div class="chan"><b>Instagram</b><div class="big">2,140</div><p>followers · 1.1% engagement. 80% of posts are event flyers. Reels are rare.</p><span class="grade mid">Needs work</span></div>
+          <div class="chan"><b>Facebook</b><div class="big">4,870</div><p>followers · steady with members over 45. Weak with younger adults.</p><span class="grade ok">Healthy</span></div>
+          <div class="chan"><b>YouTube</b><div class="big">610</div><p>subscribers · full sermons only, no Shorts, thumbnails are text-heavy.</p><span class="grade low">Untapped</span></div>
+        </div></div></div>
+
+      <div class="dsw"><div class="ds light"><span class="n">03</span><span class="k">Who we're trying to reach</span><h4>Two people we keep in mind</h4>
+        <div class="body two" style="gap:3cqw">
+          <div class="persona"><span class="av" style="background:#E9A15B"></span><div><b>Jordan, 26</b><p>Moved to town for work. Grew up in church, hasn't found one here. Scrolls Instagram and TikTok at night. Wants community but hates feeling marketed to.</p></div></div>
+          <div class="persona"><span class="av" style="background:#1F4E4A"></span><div><b>Maya, 34</b><p>Two kids under six. Checks Facebook groups and Instagram stories in short bursts. Cares about kids' ministry, safety and whether she'll fit in.</p></div></div>
+        </div></div></div>
+
+      <div class="dsw"><div class="ds"><span class="n">04</span><span class="k">What we post</span><h4>Four content pillars</h4>
+        <div class="body g4">
+          <div class="pill"><span>40%</span><b>Stories</b><p>Real people and what God is doing in their lives. Baptisms, testimonies, volunteers.</p></div>
+          <div class="pill"><span>25%</span><b>Teaching</b><p>Short sermon clips and carousels that are useful on a Tuesday.</p></div>
+          <div class="pill"><span>20%</span><b>Behind the scenes</b><p>Set-up, rehearsals, staff, the people behind Sunday.</p></div>
+          <div class="pill"><span>15%</span><b>Invites</b><p>Events and next steps, kept to one in every six or seven posts.</p></div>
+        </div></div></div>
+
+      <div class="dsw"><div class="ds"><span class="n">05</span><span class="k">When we post</span><h4>A weekly rhythm the team can keep</h4>
+        <div class="body week">
+          <div class="day"><b>MON</b><i style="background:#F0A089">Sermon reel</i><i style="background:#9F9789">YouTube upload</i></div>
+          <div class="day"><b>TUE</b><i style="background:#9FD2B0">Story post</i></div>
+          <div class="day"><b>WED</b><i style="background:#E9C46A">Carousel</i></div>
+          <div class="day"><b>THU</b><i style="background:#F0A089">Reel</i></div>
+          <div class="day"><b>FRI</b><i style="background:#C9C2B5">BTS stories</i></div>
+          <div class="day"><b>SAT</b><i style="background:#C9C2B5">Invite story</i></div>
+          <div class="day"><b>SUN</b><i style="background:#C9C2B5">Live stories</i><i style="background:#9FD2B0">Reply to comments</i></div>
+        </div></div></div>
+
+      <div class="dsw"><div class="ds light"><span class="n">06</span><span class="k">What we'll track</span><h4>Reach from non-followers, monthly</h4>
+        <div class="body">
+          <svg class="chart" viewBox="0 0 900 300" width="100%">
+            <line x1="60" y1="250" x2="880" y2="250" stroke="#D6CEBE"/>
+            <line x1="60" y1="170" x2="880" y2="170" stroke="#ECE6DA"/>
+            <line x1="60" y1="90" x2="880" y2="90" stroke="#ECE6DA"/>
+            <text x="50" y="254" font-size="14" text-anchor="end" fill="#7A7367">0</text>
+            <text x="50" y="174" font-size="14" text-anchor="end" fill="#7A7367">5k</text>
+            <text x="50" y="94" font-size="14" text-anchor="end" fill="#7A7367">10k</text>
+            <g fill="#C9C2B5"><rect x="100" y="210" width="90" height="40" rx="6"/><rect x="230" y="200" width="90" height="50" rx="6"/><rect x="360" y="205" width="90" height="45" rx="6"/></g>
+            <g fill="#D9562B"><rect x="490" y="170" width="90" height="80" rx="6"/><rect x="620" y="130" width="90" height="120" rx="6"/><rect x="750" y="90" width="90" height="160" rx="6"/></g>
+            <g font-size="14" fill="#4A453D" text-anchor="middle"><text x="145" y="275">Jun</text><text x="275" y="275">Jul</text><text x="405" y="275">Aug</text><text x="535" y="275">Month 1</text><text x="665" y="275">Month 2</text><text x="795" y="275">Month 3</text></g>
+            <text x="795" y="78" font-size="16" font-weight="700" text-anchor="middle" fill="#B3401B">Goal: 10k</text>
+            <g font-size="14" fill="#4A453D"><rect x="100" y="14" width="14" height="14" rx="3" fill="#C9C2B5"/><text x="122" y="26">Before (sample data)</text><rect x="300" y="14" width="14" height="14" rx="3" fill="#D9562B"/><text x="322" y="26">90-day targets</text></g>
+          </svg>
+        </div></div></div>
+
+      <div class="dsw"><div class="ds"><span class="n">07</span><span class="k">The plan</span><h4>90 days, three phases</h4>
+        <div class="body road">
+          <div><b>Days 1–30 · Set up</b><ul><li>Refresh bios, highlights and links</li><li>Recruit and train 4 capture volunteers</li><li>Start the weekly rhythm</li></ul></div>
+          <div><b>Days 31–60 · Build</b><ul><li>Launch a testimony reel series</li><li>Add YouTube Shorts from every sermon</li><li>Reply to every comment within 24 hours</li></ul></div>
+          <div><b>Days 61–90 · Learn</b><ul><li>Review what worked in Metricool</li><li>Drop the weakest format, double the best</li><li>Plan the next quarter with ministry leads</li></ul></div>
+        </div></div></div>
+
+      <div class="dsw"><div class="ds ember"><span class="n">08</span><span class="k">The ask</span><h4>What we need from the team</h4>
+        <div class="body"><p>One 30-minute check-in each month with ministry leaders · Access to Metricool and Meta Business Suite · A pastor on call for prayer requests and sensitive DMs · Permission to post the real, unpolished moments.</p></div></div></div>
+
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-head"><h2>Staying current</h2><p>Platforms change fast. Part of the strategy is a simple monthly habit for keeping up without chasing every trend.</p></div>
+    <div class="three">
+      <div class="panel"><h3>Watch</h3><p>Fifteen minutes a week on platform news and creator updates from Instagram, Meta and YouTube.</p></div>
+      <div class="panel"><h3>Test</h3><p>Try one new format a month, like a trending audio or a new carousel style, and give it four posts before judging it.</p></div>
+      <div class="panel"><h3>Filter</h3><p>Ask one question before using any trend: does this help us tell the truth about our church?</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="next-case"><div class="wrap"><a href="mesa-grove-capture.html"><div><span class="eyebrow">Next project</span><h2>Mesa Grove: a volunteer capture system →</h2></div></a></div></div>
+<footer><div class="wrap"><span>© 2026 Erco Media</span><p class="disclaimer">Concept work for a fictional church. All numbers are sample data, not real results.</p></div></footer>
+</body>
+</html>

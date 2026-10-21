@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rooted — Erco Media</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+:root{--forest:#18332A;--forest-2:#0F241D;--gold:#C9A24A;--bone:#E8D9A8}
+.screen{aspect-ratio:16/9;border-radius:12px;overflow:hidden;position:relative;background:var(--forest);color:var(--bone);container-type:inline-size}
+.screen .label{position:absolute;bottom:10px;right:12px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.55;font-family:var(--sans)}
+.roots{position:absolute;inset:0;width:100%;height:100%}
+.roots path{stroke:var(--gold);fill:none;stroke-width:1.4;stroke-dasharray:600;stroke-dashoffset:600;animation:grow 6s ease-out infinite}
+.roots path:nth-child(2){animation-delay:.4s}.roots path:nth-child(3){animation-delay:.8s}.roots path:nth-child(4){animation-delay:1.2s}.roots path:nth-child(5){animation-delay:1.6s}.roots path:nth-child(6){animation-delay:2s}
+@keyframes grow{0%{stroke-dashoffset:600;opacity:0}10%{opacity:.9}70%{stroke-dashoffset:0;opacity:.9}100%{stroke-dashoffset:0;opacity:0}}
+.title{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.title b{font-family:var(--serif);font-weight:400;font-size:11cqw;letter-spacing:.3em;padding-left:.3em;line-height:1;animation:fadeUp 6s ease-out infinite}
+.title small{font-size:1.6cqw;letter-spacing:.3em;text-transform:uppercase;margin-top:2cqw;opacity:.8;animation:fadeUp 6s ease-out infinite;animation-delay:.3s}
+@keyframes fadeUp{0%,15%{opacity:0;transform:translateY(12px)}35%,85%{opacity:1;transform:none}100%{opacity:0}}
+
+/* countdown */
+.cd{background:radial-gradient(ellipse at 50% 120%,#2C5444 0%,var(--forest) 55%,var(--forest-2) 100%)}
+.cd .inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.cd .small{font-size:1.7cqw;letter-spacing:.32em;text-transform:uppercase;opacity:.75}
+.cd .time{font-family:var(--serif);font-size:20cqw;font-weight:300;line-height:1;font-variant-numeric:tabular-nums;margin:1cqw 0}
+.cd .bar{width:40%;height:3px;background:rgba(232,217,168,.2);border-radius:3px;overflow:hidden}
+.cd .bar i{display:block;height:100%;background:var(--gold);width:100%;transition:width 1s linear}
+.cd .verse{position:absolute;bottom:5%;left:0;right:0;text-align:center;font-size:1.5cqw;opacity:.6;font-style:italic;font-family:var(--serif)}
+.cd-ctl{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+
+/* video wall */
+.wall{aspect-ratio:32/9;border-radius:12px;overflow:hidden;position:relative;background:linear-gradient(90deg,#0F241D,#18332A 30%,#22463A 50%,#18332A 70%,#0F241D)}
+.wall .glow{position:absolute;width:40%;height:180%;top:-40%;border-radius:50%;background:radial-gradient(circle,rgba(201,162,74,.35),transparent 65%);animation:drift 14s ease-in-out infinite alternate}
+@keyframes drift{from{left:-10%}to{left:70%}}
+.wall svg{position:absolute;inset:0;width:100%;height:100%;opacity:.5}
+.wall .seams{position:absolute;inset:0;display:grid;grid-template-columns:repeat(8,1fr)}
+.wall .seams i{border-right:1px solid rgba(255,255,255,.06)}
+
+/* lower third + slides */
+.lt{position:absolute;left:5%;bottom:10%;display:flex;align-items:stretch}
+.lt .bar{width:.6cqw;background:var(--gold)}
+.lt .txt{background:rgba(15,36,29,.92);padding:1.4cqw 2.4cqw}
+.lt b{display:block;font-family:var(--serif);font-weight:500;font-size:3.4cqw;line-height:1.1}
+.lt span{font-size:1.7cqw;letter-spacing:.14em;text-transform:uppercase;opacity:.8}
+.cam{position:absolute;inset:0;background:linear-gradient(120deg,#5a5047,#2b2622 60%,#1c1916)}
+.cam::after{content:"";position:absolute;left:42%;top:18%;width:22%;height:82%;border-radius:45% 45% 0 0;background:linear-gradient(#3e3631,#1f1b18)}
+.ann{padding:7%;display:flex;flex-direction:column;justify-content:space-between}
+.ann .k{font-size:1.8cqw;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.ann h4{font-family:var(--serif);font-weight:400;font-size:7cqw;line-height:1.02}
+.ann p{font-size:2.2cqw;opacity:.85}
+.ann.light{background:var(--bone);color:var(--forest)}
+.ann.light .k{color:#8A6A22}
+.ann.gold{background:var(--gold);color:var(--forest-2)}
+.ann.gold .k{color:var(--forest)}
+.swatches{display:flex;gap:12px;flex-wrap:wrap}
+.sw{width:120px}
+.sw i{display:block;height:70px;border-radius:10px;border:1px solid var(--line)}
+.sw span{display:block;font-size:13px;margin-top:6px}
+.sw code{font-size:12px;color:var(--muted)}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="wrap"><a class="logo" href="index.html"><span class="logo-mark"></span>Erco Media</a><ul class="nav-links"><li><a href="index.html#work">Work</a></li><li><a href="index.html#services">Services</a></li><li><a href="index.html#about">About</a></li></ul><a class="btn" href="index.html#contact">Start a project</a></div></nav>
+
+<header class="case-hero">
+  <div class="wrap">
+    <a class="back" href="index.html#work">← All work</a>
+    <div class="eyebrow" style="margin-top:28px">Sunday media pack</div>
+    <h1>Rooted</h1>
+    <p class="lede">A full set of weekly screen media for a six-week series on spiritual roots: pre-roll, a live countdown, video wall loops, lower thirds and announcement slides. Everything shares one look, so the room feels like the series from the moment people walk in.</p>
+    <span class="concept-badge">Concept project · Cedarline Church is a fictional client</span>
+    <div class="meta">
+      <div><span>Client</span>Cedarline Church</div>
+      <div><span>Screens</span>Center screen, side screens, LED wall</div>
+      <div><span>Deliverables</span>Pre-roll, countdown, loops, slides</div>
+      <div><span>Tools</span>Premiere, Photoshop, ProPresenter</div>
+    </div>
+  </div>
+</header>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-head"><h2>The look</h2><p>Deep forest green, warm gold and an off-white bone color. Thin gold lines grow like roots across every screen. The type is a classic serif with wide spacing, calm and steady, which fits a series about going deep instead of going fast.</p></div>
+    <div class="swatches">
+      <div class="sw"><i style="background:#18332A"></i><span>Forest</span><code>#18332A</code></div>
+      <div class="sw"><i style="background:#0F241D"></i><span>Deep forest</span><code>#0F241D</code></div>
+      <div class="sw"><i style="background:#C9A24A"></i><span>Gold</span><code>#C9A24A</code></div>
+      <div class="sw"><i style="background:#E8D9A8"></i><span>Bone</span><code>#E8D9A8</code></div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-head"><h2>Series pre-roll</h2><p>A short title open that plays right before the sermon. Gold roots grow out from the center, then the title settles in. This preview loops in your browser; the final file is a 1080p ProRes export with a sound design hit on the title.</p></div>
+    <div class="screen">
+      <svg class="roots" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+        <path d="M800 0 V380"/>
+        <path d="M800 380 C700 520 480 560 300 900"/>
+        <path d="M800 380 C900 520 1120 560 1300 900"/>
+        <path d="M800 420 C760 600 640 700 600 900"/>
+        <path d="M800 420 C840 600 960 700 1000 900"/>
+        <path d="M800 450 C800 650 790 780 800 900"/>
+      </svg>
+      <div class="title"><b>ROOTED</b><small>Going deeper · A six-week series</small></div>
+      <span class="label">Pre-roll · 16:9</span>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-head"><h2>Countdown</h2><p>A five-minute countdown that runs on the center screen before service. It's a working timer, so go ahead and press start. On a Sunday it runs as a ProPresenter timer with the series background behind it.</p></div>
+    <div class="screen cd" id="cd">
+      <div class="inner">
+        <span class="small">Service begins in</span>
+        <span class="time" id="cdTime">5:00</span>
+        <div class="bar"><i id="cdBar"></i></div>
+      </div>
+      <span class="verse">"Rooted and built up in him." Colossians 2:7</span>
+      <span class="label">Countdown · 16:9</span>
+    </div>
+    <div class="cd-ctl">
+      <button class="btn" id="cdStart">Start countdown</button>
+      <button class="btn ghost" id="cdReset">Reset</button>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-head"><h2>Video wall loop</h2><p>An ultra-wide motion background for the LED wall behind the stage. It moves slowly enough to sit under worship without pulling attention away. Built at 7680 × 2160 and split across the wall's panels.</p></div>
+    <div class="wall">
+      <div class="glow"></div>
+      <svg viewBox="0 0 3200 900" preserveAspectRatio="none"><path d="M0 700 C400 600 600 820 1000 720 S1600 560 2000 700 S2800 820 3200 650" stroke="#C9A24A" fill="none" stroke-width="2"/><path d="M0 780 C500 700 800 880 1300 780 S2200 640 2600 760 S3000 820 3200 760" stroke="#C9A24A" fill="none" stroke-width="1" opacity=".6"/><path d="M0 820 C300 780 700 900 1100 840 S1900 760 2400 830 S3000 880 3200 840" stroke="#C9A24A" fill="none" stroke-width="1" opacity=".4"/></svg>
+      <div class="seams"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+    <p class="note">Faint lines show where the LED panels meet, so we can keep text and key shapes off the seams.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-head"><h2>Lower thirds and slides</h2><p>Speaker names for the livestream and side screens, plus announcement slides in three color options so the weekly slides never blur together.</p></div>
+    <div class="two">
+      <div class="screen"><div class="cam"></div><div class="lt"><span class="bar"></span><div class="txt"><b>Pastor Dana Ortiz</b><span>Rooted · Week 2</span></div></div><span class="label">Lower third</span></div>
+      <div class="screen ann"><span class="k">This week</span><h4>Membership class</h4><p>Sunday, 12:30 pm · Room 104 · Lunch provided</p><span class="label">Announcement</span></div>
+      <div class="screen ann light"><span class="k">Get involved</span><h4>Serve Day</h4><p>Saturday, 8 am · Meet in the parking lot</p><span class="label">Announcement</span></div>
+      <div class="screen ann gold"><span class="k">Next steps</span><h4>Baptism Sunday</h4><p>Sign up at the welcome desk or in the app</p><span class="label">Announcement</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-head"><h2>Weekly hand-off</h2><p>What the production team gets every week, and where it lives. Files go into the shared Dropbox by Thursday so tech volunteers can load and test them before Sunday.</p></div>
+    <div class="tbl-wrap"><table class="t">
+      <tr><th>Asset</th><th>Size</th><th>Format</th><th>File name</th></tr>
+      <tr><td>Pre-roll</td><td>1920 × 1080</td><td>ProRes 422, 30 fps</td><td>2026-11-08_Rooted_Preroll_v2.mov</td></tr>
+      <tr><td>Countdown background</td><td>1920 × 1080</td><td>MP4 loop, H.264</td><td>Rooted_Countdown_BG_loop.mp4</td></tr>
+      <tr><td>Video wall loop</td><td>7680 × 2160</td><td>MP4 loop, H.265</td><td>Rooted_Wall_Loop_8K.mp4</td></tr>
+      <tr><td>Lower thirds</td><td>1920 × 1080</td><td>PNG with transparency</td><td>Rooted_LT_[Speaker].png</td></tr>
+      <tr><td>Announcement slides</td><td>1920 × 1080</td><td>PNG + Canva template</td><td>2026-11-08_Announce_[Topic].png</td></tr>
+      <tr><td>Social cutdowns</td><td>1080 × 1920</td><td>MP4</td><td>Rooted_Story_Wk2.mp4</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<div class="next-case"><div class="wrap"><a href="northvale-strategy.html"><div><span class="eyebrow">Next project</span><h2>Northvale: a social media strategy →</h2></div></a></div></div>
+<footer><div class="wrap"><span>© 2026 Erco Media</span><p class="disclaimer">Concept work for a fictional church. Names and people shown are invented.</p></div></footer>
+
+<script>
+(function(){
+  var total=300,left=total,timer=null;
+  var t=document.getElementById('cdTime'),b=document.getElementById('cdBar'),s=document.getElementById('cdStart'),r=document.getElementById('cdReset');
+  function draw(){var m=Math.floor(left/60),sec=left%60;t.textContent=m+':'+(sec<10?'0':'')+sec;b.style.width=(left/total*100)+'%';}
+  s.addEventListener('click',function(){
+    if(timer){clearInterval(timer);timer=null;s.textContent='Resume';return;}
+    if(left<=0)left=total;
+    s.textContent='Pause';
+    timer=setInterval(function(){left--;draw();if(left<=0){clearInterval(timer);timer=null;t.textContent='Welcome';s.textContent='Start again';}},1000);
+  });
+  r.addEventListener('click',function(){clearInterval(timer);timer=null;left=total;s.textContent='Start countdown';draw();});
+  draw();
+})();
+</script>
+</body>
+</html>

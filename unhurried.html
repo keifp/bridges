@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unhurried — Erco Media</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+:root{--cream:#EDE4D3;--sage:#8E9C7B;--olive:#2F3A2C;--apricot:#E9A15B}
+.slide{width:300px;aspect-ratio:4/5;border-radius:12px;overflow:hidden;position:relative;padding:26px;display:flex;flex-direction:column;color:var(--olive);background:var(--cream);font-family:var(--sans)}
+.slide .pg{position:absolute;top:18px;right:20px;font-size:11px;letter-spacing:.14em;opacity:.6}
+.slide .kick{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+.slide h4{font-family:var(--serif);font-weight:400;font-size:34px;line-height:1.05;letter-spacing:-.02em;margin-top:auto}
+.slide p{font-size:14px;line-height:1.45;margin-top:12px}
+.slide .sun{position:absolute;width:150px;height:150px;border-radius:50%;background:var(--apricot);top:40px;right:-30px}
+.s1 h4{font-size:52px;font-style:italic}
+.s2{background:var(--olive);color:var(--cream)}
+.s2 .big{font-family:var(--serif);font-size:88px;line-height:.9;color:var(--apricot);margin-top:30px}
+.s3{background:var(--sage);color:#1E261C}
+.s3 ol{list-style:none;margin-top:auto}
+.s3 li{display:flex;gap:12px;padding:10px 0;border-top:1px solid rgba(30,38,28,.25);font-size:14.5px}
+.s3 li b{font-family:var(--serif);font-weight:400;font-size:20px;width:22px}
+.s4 blockquote{font-family:var(--serif);font-size:25px;line-height:1.2;margin-top:auto;font-style:italic}
+.s4 cite{font-style:normal;font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-top:14px;display:block}
+.s5{background:var(--apricot)}
+.s5 .cta{margin-top:auto;background:var(--olive);color:var(--cream);border-radius:999px;padding:12px 16px;font-size:13px;font-weight:600;text-align:center}
+
+.reel{width:190px;flex:none}
+.frame{aspect-ratio:9/16;border-radius:12px;position:relative;overflow:hidden;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:14px;font-size:13px}
+.frame .cap{background:rgba(255,255,255,.92);color:#111;font-weight:700;padding:6px 8px;border-radius:6px;font-size:13px;line-height:1.25;align-self:flex-start}
+.frame .tc{position:absolute;top:10px;left:12px;font-size:11px;font-family:ui-monospace,Menlo,monospace;background:rgba(0,0,0,.45);padding:2px 6px;border-radius:4px}
+.frame .scene{position:absolute;inset:0}
+.reel dl{font-size:13px;margin-top:10px;color:var(--ink-2)}
+.reel dt{font-weight:700;color:var(--ink);font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-top:8px}
+
+.cal{display:grid;grid-template-columns:90px repeat(7,1fr);gap:6px;min-width:860px}
+.cal .h{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:6px}
+.cal .wk{font-family:var(--serif);font-size:15px;padding:10px 6px}
+.cal .c{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:8px;font-size:12.5px;line-height:1.35;min-height:72px}
+.cal .c i{display:block;font-style:normal;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:3px}
+.c.reel-c{border-left:4px solid var(--ember)} .c.reel-c i{color:var(--ember)}
+.c.car{border-left:4px solid var(--teal)} .c.car i{color:var(--teal)}
+.c.story{border-left:4px solid var(--gold)} .c.story i{color:#9C7A26}
+.c.yt{border-left:4px solid #8B2E2E} .c.yt i{color:#8B2E2E}
+.c.empty{background:transparent;border-style:dashed}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;margin-top:16px;color:var(--ink-2)}
+.legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;background:var(--c)}
+
+.chat{display:flex;flex-direction:column;gap:10px}
+.bub{max-width:88%;padding:10px 14px;border-radius:16px;font-size:14.5px;line-height:1.45}
+.bub.them{background:var(--paper-2);align-self:flex-start;border-bottom-left-radius:4px}
+.bub.us{background:var(--olive);color:var(--cream);align-self:flex-end;border-bottom-right-radius:4px}
+.who{font-size:12px;color:var(--muted)}
+.kpi{font-family:var(--serif);font-size:44px;color:var(--ember);line-height:1}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="wrap"><a class="logo" href="index.html"><span class="logo-mark"></span>Erco Media</a><ul class="nav-links"><li><a href="index.html#work">Work</a></li><li><a href="index.html#services">Services</a></li><li><a href="index.html#about">About</a></li></ul><a class="btn" href="index.html#contact">Start a project</a></div></nav>
+
+<header class="case-hero">
+  <div class="wrap">
+    <a class="back" href="index.html#work">← All work</a>
+    <div class="eyebrow" style="margin-top:28px">Social campaign</div>
+    <h1>Unhurried</h1>
+    <p class="lede">A four-week social rollout for a sermon series on Sabbath rest. The goal was to reach people in their 20s and 30s who feel worn out, and give them one honest reason to show up on Sunday.</p>
+    <span class="concept-badge">Concept project · Lanternfield Church is a fictional client</span>
+    <div class="meta">
+      <div><span>Client</span>Lanternfield Church</div>
+      <div><span>Platforms</span>Instagram, Facebook, YouTube</div>
+      <div><span>Deliverables</span>Carousels, reels, stories, calendar</div>
+      <div><span>Timeline</span>2 weeks prep · 4-week series</div>
+    </div>
+  </div>
+</header>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-head"><h2>The idea</h2><p>Most church promo shouts. This one slows down. Every piece uses warm, quiet colors, lots of empty space, and short lines of text, so the feed itself feels like a deep breath. The voice is plain and a little honest about how tired everyone is.</p></div>
+    <div class="three">
+      <div class="panel"><h3>Who it's for</h3><p>Young adults and young parents who are busy, burned out, and skeptical of anything that feels like a sales pitch.</p></div>
+      <div class="panel"><h3>What it says</h3><p>"You weren't made to run on empty." Rest is a gift from God, not a reward you earn.</p></div>
+      <div class="panel"><h3>What success looks like</h3><p>More saves and shares than likes, first-time guest cards that mention Instagram, and replies that start real conversations.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-head"><h2>Launch carousel</h2><p>Five slides built to be saved and sent to a friend. The first slide makes people stop, the middle slides give them something useful, and the last one invites them in. Swipe to see all five.</p></div>
+    <div class="scroller">
+      <div class="slide s1"><span class="pg">1/5</span><span class="sun"></span><span class="kick">A new series</span><h4>Unhurried</h4><p>Four weeks on the lost art of rest.</p></div>
+      <div class="slide s2"><span class="pg">2/5</span><span class="kick">Be honest</span><div class="big">Tired?</div><p>Not just sleepy. Tired in a way a nap doesn't fix.</p><h4 style="font-size:26px">You weren't made to run on empty.</h4></div>
+      <div class="slide s3"><span class="pg">3/5</span><span class="kick">Try this week</span><ol><li><b>1</b>Put your phone in a drawer for one hour on Sunday.</li><li><b>2</b>Eat one meal without a screen.</li><li><b>3</b>Take a walk with no destination.</li></ol></div>
+      <div class="slide s4"><span class="pg">4/5</span><span class="kick">Why it matters</span><blockquote>"Come to me, all who are weary and burdened, and I will give you rest."</blockquote><cite>Matthew 11:28</cite></div>
+      <div class="slide s5"><span class="pg">5/5</span><span class="kick">Starts this Sunday</span><h4>Come rest with us.</h4><p>Sundays at 9 and 11. Coffee's on us.</p><div class="cta">Plan your visit · link in bio</div></div>
+    </div>
+
+    <div class="two" style="margin-top:48px;align-items:center">
+      <div style="display:flex;justify-content:center">
+        <div class="phone"><div class="phone-screen">
+          <div class="ig-top"><span class="ig-av" style="background:var(--olive)"></span>lanternfieldchurch</div>
+          <div class="slide s1" style="width:100%;border-radius:0"><span class="pg">1/5</span><span class="sun"></span><span class="kick">A new series</span><h4>Unhurried</h4><p>Four weeks on the lost art of rest.</p></div>
+          <div class="ig-actions">♡ ◯ ➤ <span style="margin-left:auto">⌑</span></div>
+          <div class="ig-cap"><b>lanternfieldchurch</b> Be honest: when was the last time you rested without feeling guilty? 🌾 Our new series Unhurried starts Sunday. Save this for the week ahead, and send it to the friend who needs it most.</div>
+        </div></div>
+      </div>
+      <div class="panel">
+        <h3>Caption and posting notes</h3>
+        <ul>
+          <li>Opens with a question so people answer in the comments.</li>
+          <li>Asks for a save and a send, since those count most with the algorithm right now.</li>
+          <li>One emoji, no hashtag wall. Three hashtags in the first comment.</li>
+          <li>Post Tuesday at 7:30 pm, when this audience is most active.</li>
+          <li>Cross-post to Facebook through Meta Business Suite with a shorter caption.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-head"><h2>Reel storyboard</h2><p>A 20-second reel shot on a phone by a volunteer. No voiceover, just natural sound and on-screen text. It shows an ordinary rushed morning that slowly comes to a stop.</p></div>
+    <div class="scroller">
+      <div class="reel"><div class="frame"><div class="scene" style="background:linear-gradient(160deg,#5b6470,#2a2f36)"></div><span class="tc">0:00</span><span class="cap" style="position:relative">5:58 am.</span></div><dl><dt>Shot</dt><dd>Phone alarm, close up, hand slaps it.</dd><dt>Sound</dt><dd>Alarm, sheets rustling.</dd></dl></div>
+      <div class="reel"><div class="frame"><div class="scene" style="background:linear-gradient(160deg,#7a6a5a,#3b3129)"></div><span class="tc">0:03</span><span class="cap" style="position:relative">Coffee. Emails. Traffic.</span></div><dl><dt>Shot</dt><dd>Fast cuts: pour, laptop, steering wheel.</dd><dt>Sound</dt><dd>Cuts land on the beat.</dd></dl></div>
+      <div class="reel"><div class="frame"><div class="scene" style="background:linear-gradient(160deg,#9b5d43,#4a2c20)"></div><span class="tc">0:07</span><span class="cap" style="position:relative">Kids. Dinner. Repeat.</span></div><dl><dt>Shot</dt><dd>Faster cuts, slightly shaky.</dd><dt>Sound</dt><dd>Busy kitchen noise builds.</dd></dl></div>
+      <div class="reel"><div class="frame"><div class="scene" style="background:linear-gradient(160deg,#c9b89a,#8e9c7b)"></div><span class="tc">0:11</span><span class="cap" style="position:relative">What if you just… stopped?</span></div><dl><dt>Shot</dt><dd>Everything cuts to silence. Slow pan across a porch.</dd><dt>Sound</dt><dd>Birds, wind.</dd></dl></div>
+      <div class="reel"><div class="frame"><div class="scene" style="background:linear-gradient(160deg,#e9a15b,#c77a3a)"></div><span class="tc">0:15</span><span class="cap" style="position:relative">You weren't made to run on empty.</span></div><dl><dt>Shot</dt><dd>Hands around a mug, sunrise behind.</dd><dt>Sound</dt><dd>Soft piano enters.</dd></dl></div>
+      <div class="reel"><div class="frame"><div class="scene" style="background:var(--cream)"></div><span class="tc">0:18</span><span class="cap" style="position:relative;background:var(--olive);color:var(--cream)">Unhurried · Starts Sunday</span></div><dl><dt>Shot</dt><dd>End card matching the carousel.</dd><dt>Sound</dt><dd>Piano resolves.</dd></dl></div>
+    </div>
+    <p class="note">Edited in Premiere with captions burned in. A 9:16 version goes to Reels and Shorts, and a 4:5 crop goes to the Facebook feed.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-head"><h2>Content calendar</h2><p>The full rollout, two weeks before the series and through all four Sundays. It lives in Monday.com so the comms team and ministry leaders can see what's coming, and it's scheduled in Metricool.</p></div>
+    <div style="overflow-x:auto">
+    <div class="cal">
+      <div></div><div class="h">Mon</div><div class="h">Tue</div><div class="h">Wed</div><div class="h">Thu</div><div class="h">Fri</div><div class="h">Sat</div><div class="h">Sun</div>
+      <div class="wk">Pre-launch</div>
+      <div class="c empty"></div><div class="c car"><i>Carousel</i>Launch carousel (5 slides)</div><div class="c empty"></div><div class="c reel-c"><i>Reel</i>"5:58 am" teaser</div><div class="c empty"></div><div class="c story"><i>Story</i>Poll: "How rested do you feel?"</div><div class="c story"><i>Story</i>"Starts next week" countdown sticker</div>
+      <div class="wk">Week 1</div>
+      <div class="c yt"><i>YouTube</i>Full sermon + Shorts clip</div><div class="c reel-c"><i>Reel</i>60-sec sermon clip</div><div class="c story"><i>Story</i>Share guest replies</div><div class="c car"><i>Carousel</i>"Try this week" practices</div><div class="c empty"></div><div class="c story"><i>Story</i>Behind the scenes, set-up</div><div class="c story"><i>Story</i>Live moments from service</div>
+      <div class="wk">Week 2</div>
+      <div class="c yt"><i>YouTube</i>Full sermon + Shorts clip</div><div class="c reel-c"><i>Reel</i>"What rest means to me" street interviews</div><div class="c empty"></div><div class="c car"><i>Carousel</i>Quote card from Sunday</div><div class="c story"><i>Story</i>Q&amp;A box for the pastor</div><div class="c empty"></div><div class="c story"><i>Story</i>Live moments from service</div>
+      <div class="wk">Week 3</div>
+      <div class="c yt"><i>YouTube</i>Full sermon + Shorts clip</div><div class="c reel-c"><i>Reel</i>Pastor answers Q&amp;A</div><div class="c story"><i>Story</i>Small group spotlight</div><div class="c car"><i>Carousel</i>"A screen-free Sunday" guide</div><div class="c empty"></div><div class="c reel-c"><i>Reel</i>Volunteer testimony</div><div class="c story"><i>Story</i>Live moments from service</div>
+      <div class="wk">Week 4</div>
+      <div class="c yt"><i>YouTube</i>Full sermon + Shorts clip</div><div class="c reel-c"><i>Reel</i>Series recap montage</div><div class="c empty"></div><div class="c car"><i>Carousel</i>"What we learned" wrap-up</div><div class="c empty"></div><div class="c story"><i>Story</i>Next series teaser</div><div class="c story"><i>Story</i>Thank-you from staff</div>
+    </div>
+    </div>
+    <div class="legend"><span style="--c:var(--ember)">Reel</span><span style="--c:var(--teal)">Carousel</span><span style="--c:var(--gold)">Story</span><span style="--c:#8B2E2E">YouTube</span></div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-head"><h2>Comments and DMs</h2><p>Replying is part of the campaign. Each reply should sound like a real person at the church: warm, short, and never a canned script. Prayer requests and anything sensitive go to a pastor the same day.</p></div>
+    <div class="two">
+      <div class="panel chat">
+        <span class="who">Comment on the launch carousel</span>
+        <div class="bub them">honestly the last time I rested was 2019 😅</div>
+        <div class="bub us">Ha, you're not alone. Want to try step 1 with us this Sunday? Phone in a drawer, one hour. We'll save you a seat ☕</div>
+      </div>
+      <div class="panel chat">
+        <span class="who">Direct message</span>
+        <div class="bub them">Is this series for people who don't really go to church? I'm kind of burned out on church too tbh</div>
+        <div class="bub us">That's a really honest question, thank you for asking it. Yes, it's for anyone who's tired, church tired included. Nobody will put you on the spot. Can I tell you what to expect on a Sunday?</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-head"><h2>What we'd measure</h2><p>Targets we'd set with the comms team before launch, then check in the monthly review. These are goals for the concept, not real results.</p></div>
+    <div class="three">
+      <div class="panel"><div class="kpi">Saves</div><p>Target: saves and shares outpace likes on every carousel.</p></div>
+      <div class="panel"><div class="kpi">Reach</div><p>Target: at least half of reel views come from non-followers.</p></div>
+      <div class="panel"><div class="kpi">Visits</div><p>Target: guest cards that list Instagram as how they heard.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="next-case"><div class="wrap"><a href="rooted.html"><div><span class="eyebrow">Next project</span><h2>Rooted: a Sunday media pack →</h2></div></a></div></div>
+<footer><div class="wrap"><span>© 2026 Erco Media</span><p class="disclaimer">Concept work for a fictional church. Any resemblance to a real church is unintended.</p></div></footer>
+</body>
+</html>
