@@ -109,7 +109,8 @@
 .cform .chips input{accent-color:var(--ember)}
 .cform .btn{justify-self:start;background:var(--ink)}
 .cform .fmsg{font-size:14.5px;color:var(--ink-2);min-height:1em}
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.plans{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:stretch}.plan{padding:26px!important}.plan .price b{font-size:42px!important}
+.founding{background:var(--ink);color:var(--paper);border-radius:var(--r);padding:14px 20px;margin-bottom:30px;font-size:15.5px}.founding b{color:var(--gold)}
 .plan{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:30px;display:flex;flex-direction:column;gap:10px;position:relative}
 .plan.feat{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .plan .pop{position:absolute;top:-12px;left:30px;background:var(--ember);color:#fff;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:99px}
@@ -121,7 +122,7 @@
 .plan li{padding-left:22px;position:relative}.plan li::before{content:"✓";position:absolute;left:0;color:var(--ember);font-weight:700}
 .plan .btn{justify-content:center}.plan.feat .btn{background:var(--gold);color:var(--ink)}.plan.feat .btn:hover{background:var(--white)}
 .plan .small{font-size:12.5px;color:var(--muted);text-align:center}
-@media (max-width:900px){.plans{grid-template-columns:1fr}}
+@media (max-width:1100px){.plans{grid-template-columns:1fr 1fr;row-gap:30px}}@media (max-width:640px){.plans{grid-template-columns:1fr}}
 .toast{position:fixed;left:50%;bottom:max(24px,env(safe-area-inset-bottom,0px));translate:-50% 0;background:var(--ink);color:var(--paper);padding:14px 20px;border-radius:12px;font-size:15px;box-shadow:0 18px 40px -16px rgba(0,0,0,.5);z-index:100;max-width:calc(100% - 32px)}
 .addons{display:grid;gap:14px}
 .addon{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:22px 26px;display:flex;justify-content:space-between;align-items:center;gap:24px}
@@ -129,6 +130,33 @@
 .addon .ar{display:flex;align-items:center;gap:14px;flex:none}.addon .ar b{font-family:var(--serif);font-weight:400;font-size:30px}.addon .ar span{font-size:13px;color:var(--muted);width:70px}
 @media (max-width:700px){.addon{flex-direction:column;align-items:flex-start}.addon .ar{flex-wrap:wrap}}
 #packages .addon .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}#packages .addon .btn.ghost:hover{background:var(--ink);color:var(--paper)}
+.hero-link{align-self:center;color:var(--ink-2);font-size:15px;text-decoration:underline;text-underline-offset:3px}
+.plans-help{margin-top:22px;text-align:center;font-size:16px;color:var(--ink-2)}.plans-help a{color:var(--ember-dk);font-weight:600}
+.checkup{background:var(--teal);color:var(--paper)}.checkup .eyebrow{color:var(--gold)}.checkup h2{color:var(--white);margin-top:12px}.checkup .lede{color:#CFE0DC;margin-top:18px}
+.checkup-in{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:center}
+.checkup-cta{background:rgba(255,253,248,.07);border:1px solid rgba(255,253,248,.18);border-radius:var(--r);padding:30px;display:flex;flex-direction:column;gap:16px}
+.checkup-list{list-style:none;display:grid;gap:10px;font-size:15.5px}.checkup-list li{padding-left:24px;position:relative}.checkup-list li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:700}
+.checkup .btn{background:var(--gold);color:var(--ink);justify-content:center}.checkup .btn:hover{background:var(--white)}
+.checkup .small{font-size:13.5px;color:#CFE0DC;text-align:center}.checkup .small a{color:var(--white)}
+@media (max-width:860px){.checkup-in{grid-template-columns:1fr;gap:28px}}
+.faq-list{display:grid;gap:12px;max-width:860px}
+.faq details{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:18px 22px}
+.faq summary{cursor:pointer;font-weight:600;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}.faq summary::after{content:"+";color:var(--ember);font-size:22px;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin-top:12px;color:var(--ink-2);font-size:15.5px;line-height:1.6}
+.faq .sec-head a{color:var(--ember-dk);font-weight:600}
+.stories{background:var(--white)}
+.tq-logos{display:flex;flex-wrap:wrap;gap:28px 44px;align-items:center;justify-content:space-between;padding:8px 0 36px;border-bottom:1px solid var(--line);margin-bottom:36px}
+.tq-logos img{height:72px;width:auto;opacity:.85;filter:grayscale(1)}
+.tq-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}.tq{grid-column:span 2}.tq:nth-child(4){grid-column:2/span 2}
+.tq{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;gap:16px;margin:0}
+.tq-logo{height:96px;width:96px;object-fit:contain;align-self:flex-start;margin:-14px 0 -10px -14px}
+.tq-logo.dark{background:#171512;border-radius:12px;margin:0 0 0 0;height:72px;width:72px;padding:4px}
+.tq blockquote{font-family:var(--serif);font-size:19px;line-height:1.45;color:var(--ink);flex:1}
+.tq figcaption{display:grid;gap:2px;font-size:14px;color:var(--muted)}.tq figcaption b{color:var(--ink);font-size:15px}
+@media (max-width:980px){.tq-grid{grid-template-columns:1fr 1fr}.tq,.tq:nth-child(4){grid-column:auto}}
+@media (max-width:640px){.tq-grid{grid-template-columns:1fr}.tq-logos{justify-content:center}.tq-logos img{height:56px}}
 </style>
 </head>
 <body>
@@ -137,7 +165,7 @@
   <div class="wrap">
     <a class="logo" href="index.html"><span class="logo-mark"></span>Bridges</a>
     <ul class="nav-links"><li><a href="index.html" class="on">Social Media</a></li><li><a href="web.html">Websites</a></li><li><a href="logos.html">Logos</a></li><li><a href="ai.html">AI Consulting</a></li><li><a href="contact.html">Contact</a></li></ul>
-    <a class="btn" href="#packages">See packages</a>
+    <a class="btn" href="contact.html#book">Book a free call</a>
   </div>
 </nav>
 
@@ -147,8 +175,9 @@
     <h1>Telling the story of what God is doing in your church, <em class="ital">one post at a time.</em></h1>
     <p class="lede">Bridges helps churches show up online with content that feels fresh, honest, and unmistakably theirs. We handle social strategy, reels and carousels, Sunday screen media, and the volunteer teams who capture it all.</p>
     <div class="hero-row">
-      <a class="btn" href="#work">See the work</a>
-      <a class="btn ghost" href="#services">What we do</a>
+      <a class="btn" href="contact.html#book">Book a free 20-minute call</a>
+      <a class="btn ghost" href="#packages">See packages</a>
+      <a class="hero-link" href="#work">or see the work ↓</a>
     </div>
 
     <div class="hero-strip" aria-hidden="true">
@@ -251,6 +280,21 @@
   </div>
 </section>
 
+<section id="stories" class="stories">
+  <div class="wrap">
+    <div class="sec-head"><div><span class="eyebrow">Client stories</span><h2>What a partnership <em class="ital">looks like.</em></h2></div><p>The results each package is built to deliver, told from the church’s side.</p></div>
+    <p class="concept-badge" style="margin:0 0 28px">Concept stories: these churches and quotes are illustrative, written to match the concept projects above. They are not real client reviews.</p>
+    <div class="tq-grid">
+      <figure class="tq"><img class="tq-logo" src="img/clients/cornerstone-fellowship.webp" alt="" loading="lazy"><blockquote>“Bridges took our sermon series from a single slide to a four-week rollout on Instagram, Facebook, and YouTube. They planned every post, and our engagement doubled before week two.”</blockquote><figcaption><b>Pastor Dana Whitfield</b><span>Lead Pastor, Cornerstone Fellowship</span></figcaption></figure>
+      <figure class="tq"><img class="tq-logo dark" src="img/clients/crossroads-church.webp" alt="" loading="lazy"><blockquote>“We had no posting plan and four half-abandoned accounts. Bridges started with a channel audit, then gave us content pillars, a weekly rhythm, and a 90-day roadmap we could actually follow.”</blockquote><figcaption><b>Marcus Bell</b><span>Communications Director, Crossroads Church</span></figcaption></figure>
+      <figure class="tq"><img class="tq-logo" src="img/clients/mercy-point.webp" alt="" loading="lazy"><blockquote>“Our Sunday screens used to be an afterthought. Now Bridges sends a full media pack every series, with pre-roll, countdowns, lower thirds, and video wall loops that set the tone before the first song.”</blockquote><figcaption><b>Renee Calloway</b><span>Executive Pastor, Mercy Point</span></figcaption></figure>
+      <figure class="tq"><img class="tq-logo" src="img/clients/open-door-church.webp" alt="" loading="lazy"><blockquote>“Our photo volunteers were great people with no system. Bridges set them up in Planning Center with shot lists, call times, and a Dropbox library, and now no good moment gets lost.”</blockquote><figcaption><b>Tom Alvarez</b><span>Volunteer Media Lead, Open Door Church</span></figcaption></figure>
+      <figure class="tq"><img class="tq-logo" src="img/clients/redemption-hill.webp" alt="" loading="lazy"><blockquote>“I inherited social media with zero training. The biweekly coaching calls with Bridges gave me honest feedback and a clear two-week plan every time, and I finally feel confident running our channels.”</blockquote><figcaption><b>Grace Okafor</b><span>Communications Coordinator, Redemption Hill</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+
 <section id="services" class="services">
   <div class="wrap">
     <div class="sec-head">
@@ -276,15 +320,48 @@
 
 
 
-<section id="packages" class="contact" style="background:var(--paper-2);color:var(--ink)">
-  <div class="wrap">
-    <div class="sec-head"><div><span class="eyebrow">Social media packages</span><h2>Pick a package. <em class="ital">We'll take it from there.</em></h2></div><p>Simple monthly pricing with no setup fees. Your first week starts with a needs assessment so everything fits your church from day one.</p></div>
-    <div class="plans"><div class="plan"><span class="len">Small churches</span><h3>Social Essentials</h3><p class="price"><b>$700</b>/month</p><ul><li>3 posts and carousels a week</li><li>2 reels or sermon clips a month</li><li>Instagram and Facebook</li><li>Comment and DM replies twice a week</li><li>Quarterly strategy plan</li><li>Monthly analytics report</li></ul><button class="btn buy" type="button" data-plan="essentials">Subscribe</button><span class="small">Billed monthly · No setup fee</span></div><div class="plan"><span class="len">Mid-size churches</span><h3>Sunday + Social</h3><p class="price"><b>$1,200</b>/month</p><ul><li>4 posts and carousels a week</li><li>A reel or sermon clip every week</li><li>Instagram, Facebook and YouTube</li><li>Weekday comment and DM replies</li><li>Weekly Sunday media, series packs included</li><li>Monthly ministry check-in and Zoom</li></ul><button class="btn buy" type="button" data-plan="sunday">Subscribe</button><span class="small">Billed monthly · No setup fee</span></div><div class="plan feat"><span class="pop">Most complete</span><span class="len">Replaces a part-time media hire</span><h3>Ministry Partner</h3><p class="price"><b>$1,900</b>/month</p><ul><li>5+ posts and carousels a week</li><li>2–3 reels or sermon clips a week</li><li>Weekday and Sunday replies from a credentialed minister</li><li>Weekly Sunday media, series packs included</li><li>Planning Center volunteer scheduling</li><li>Photo library, campus displays and comms projects</li><li>Bi-weekly ministry check-ins and Zoom</li></ul><button class="btn buy" type="button" data-plan="partner">Subscribe</button><span class="small">Billed monthly · No setup fee</span></div></div>
-    <h3 style="font-size:24px;margin:56px 0 16px">Add-ons for any package</h3>
-    <div class="addons"><div class="addon"><div><h3>Sermon series pack</h3><p>Pre-roll, countdown, two or three slide layouts and a social set for one series. Two rounds of edits. Included in Sunday + Social and Ministry Partner.</p></div><div class="ar"><b>$300</b><span>per series</span><button class="btn ghost buy" type="button" data-plan="series">Buy now</button></div></div><div class="addon"><div><h3>AI Starter</h3><p>Church voice and guardrails Claude Skills, a plain-language AI policy and one staff training. $500 with Sunday + Social, free with Ministry Partner. See <a href="ai.html">AI Consulting</a> for workshops and full rollouts.</p></div><div class="ar"><b>$750</b><span>one-time</span><button class="btn ghost buy" type="button" data-plan="ai">Buy now</button></div></div><div class="addon"><div><h3>On-site event coverage</h3><p>Photo and video coverage for an event in the Waco area. Choose the number of hours at checkout.</p></div><div class="ar"><b>$50</b><span>per hour</span><button class="btn ghost buy" type="button" data-plan="event">Book hours</button></div></div></div>
-    <p class="note" style="margin-top:16px">No setup fees. Week 1 is a needs assessment. Monthly packages have a six-month minimum, then continue month to month. Websites, logos and AI consulting have their own packages on those tabs.</p>
+<section id="checkup" class="checkup">
+  <div class="wrap checkup-in">
+    <div>
+      <span class="eyebrow">Free social media check-up</span>
+      <h2>Send us your church’s Instagram. <em class="ital">We’ll send back three quick wins.</em></h2>
+      <p class="lede">A short, honest look at your church’s social channels, with three things you could change this month to reach more people. It’s free, it takes a few days, and there’s no sales pitch attached.</p>
+    </div>
+    <div class="checkup-cta">
+      <ul class="checkup-list"><li>What’s working and what’s getting missed</li><li>Three specific fixes your team can make now</li><li>A sample post rewritten in your church’s voice</li></ul>
+      <a class="btn" href="contact.html?checkup=1#form">Request a free check-up</a>
+      <span class="small">Or <a href="contact.html#book">book a free call</a> and we’ll walk through it together.</span>
+    </div>
   </div>
 </section>
+
+<section id="packages" class="contact" style="background:var(--paper-2);color:var(--ink)">
+  <div class="wrap">
+    <div class="sec-head"><div><span class="eyebrow">Social media packages</span><h2>Pick a package. <em class="ital">We'll take it from there.</em></h2></div><p>Simple monthly pricing, no setup fees, no contracts. Cancel anytime. Your first week starts with a needs assessment so everything fits your church from day one.</p></div>
+    <div class="founding"><b>Founding rates.</b> The first 10 churches to join keep these prices for as long as they stay with us.</div>
+    <div class="plans"><div class="plan"><span class="pop">Built for small churches</span><span class="len">Small churches</span><h3>Sunday to Sunday</h3><p class="price"><b>$249</b>/month</p><ul><li>3 Facebook posts a week, shared to Instagram</li><li>A sermon quote graphic every week</li><li>2 sermon clips a month</li><li>Event graphics for your announcements</li><li>Google Business Profile kept current</li><li>Monthly 20-minute check-in</li><li>Just send your bulletin by Wednesday</li></ul><button class="btn buy" type="button" data-plan="sundaytosunday">Subscribe</button><span class="small">Founding rate · Month to month · Cancel anytime</span></div><div class="plan"><span class="len">Growing churches</span><h3>Social Essentials</h3><p class="price"><b>$449</b>/month</p><ul><li>3 posts and carousels a week</li><li>2 reels or sermon clips a month</li><li>Instagram and Facebook</li><li>Comment and DM replies twice a week</li><li>Quarterly strategy plan</li><li>Monthly analytics report</li></ul><button class="btn buy" type="button" data-plan="essentials">Subscribe</button><span class="small">Founding rate · Month to month · Cancel anytime</span></div><div class="plan"><span class="len">Mid-size churches</span><h3>Sunday + Social</h3><p class="price"><b>$799</b>/month</p><ul><li>4 posts and carousels a week</li><li>A reel or sermon clip every week</li><li>Instagram, Facebook and YouTube</li><li>Weekday comment and DM replies</li><li>Weekly Sunday media, series packs included</li><li>Monthly ministry check-in and Zoom</li></ul><button class="btn buy" type="button" data-plan="sunday">Subscribe</button><span class="small">Founding rate · Month to month · Cancel anytime</span></div><div class="plan feat"><span class="pop">Most complete</span><span class="len">Replaces a part-time media hire</span><h3>Ministry Partner</h3><p class="price"><b>$1,295</b>/month</p><ul><li>5+ posts and carousels a week</li><li>2–3 reels or sermon clips a week</li><li>Weekday and Sunday replies from a credentialed minister</li><li>Weekly Sunday media, series packs included</li><li>Planning Center volunteer scheduling</li><li>Photo library, campus displays and comms projects</li><li>Bi-weekly ministry check-ins and Zoom</li></ul><a class="btn" href="contact.html#book">Book a free call</a><span class="small">Founding rate · Month to month · Cancel anytime</span></div></div>
+    <p class="plans-help">Not sure which fits? <a href="contact.html#book">Book a free 20-minute call</a> and we’ll recommend one. No pressure, no commitment.</p>
+    <h3 style="font-size:24px;margin:56px 0 16px">One-time options and add-ons</h3>
+    <div class="addons"><div class="addon"><div><h3>Jumpstart</h3><p>Not ready for a monthly plan? We clean up your Facebook page and Google profile, build 6–8 branded post templates, and train whoever posts now in a one-hour session.</p></div><div class="ar"><b>$250</b><span>one-time</span><button class="btn ghost buy" type="button" data-plan="jumpstart">Buy now</button></div></div><div class="addon"><div><h3>Sermon series pack</h3><p>Pre-roll, countdown, two or three slide layouts and a social set for one series. Two rounds of edits. Included in Sunday + Social and Ministry Partner.</p></div><div class="ar"><b>$200</b><span>per series</span><button class="btn ghost buy" type="button" data-plan="series">Buy now</button></div></div><div class="addon"><div><h3>AI Starter</h3><p>Church voice and guardrails Claude Skills, a plain-language AI policy and one staff training. $295 with Sunday + Social, free with Ministry Partner. See <a href="ai.html">AI Consulting</a> for workshops and full rollouts.</p></div><div class="ar"><b>$495</b><span>one-time</span><button class="btn ghost buy" type="button" data-plan="ai">Buy now</button></div></div><div class="addon"><div><h3>On-site event coverage</h3><p>Photo and video coverage for an event in the Waco area. Three-hour minimum; choose your hours at checkout.</p></div><div class="ar"><b>$50</b><span>per hour</span><button class="btn ghost buy" type="button" data-plan="event">Book hours</button></div></div></div>
+    <p class="note" style="margin-top:16px">No setup fees. Week 1 is a needs assessment. No contracts or minimums: every package is month to month, and you can cancel anytime. Websites, logos and AI consulting have their own packages on those tabs.</p>
+  </div>
+</section>
+
+<section id="faq" class="faq">
+  <div class="wrap">
+    <div class="sec-head"><div><span class="eyebrow">Questions</span><h2>Common questions, <em class="ital">plain answers.</em></h2></div><p>Don’t see yours? <a href="contact.html#book">Book a free call</a> and ask us anything.</p></div>
+    <div class="faq-list">
+      <details><summary>Who actually does the posting?</summary><p>We do. Once your needs assessment is done, our team writes, designs and schedules your posts. Your staff stays in the loop and approves the plan, but you don’t have to log in and post anything yourself.</p></details>
+      <details><summary>Do we have to give you our passwords?</summary><p>No. You add Bridges as a team member through Meta Business Suite and YouTube’s permissions, so your logins stay with you. You can remove our access at any time.</p></details>
+      <details><summary>Is there a contract or minimum?</summary><p>No. Every monthly package is month to month. If it isn’t working for you, cancel anytime and we’ll hand everything back.</p></details>
+      <details><summary>Will this work for a small church?</summary><p>Yes. Sunday to Sunday is built for churches without a media staff: you send the bulletin, we handle the rest. If a monthly plan isn’t in the budget, Jumpstart gets you set up for a one-time $250.</p></details>
+      <details><summary>How do you make sure it sounds like our church?</summary><p>Week one is a needs assessment. We learn your church’s voice, what you believe and what’s coming up, and we build a short guide that every post follows. Nothing goes out that doesn’t sound like you.</p></details>
+      <details><summary>Who owns the photos, videos and graphics?</summary><p>You do. Everything we make for your church is yours to keep and reuse, even if you stop working with us.</p></details>
+      <details><summary>What happens on the first call?</summary><p>It’s a free 20-minute Zoom call. We’ll ask about your church and what’s coming up, look at your current channels together, and tell you honestly which package fits, or whether you need one at all.</p></details>
+    </div>
+  </div>
+</section>
+
 
 
 <footer>
@@ -296,7 +373,7 @@
 <script>
 (function(){
   /* Paste each Stripe Payment Link here once it exists, e.g. "https://buy.stripe.com/abc123" */
-  var LINKS={essentials:"",sunday:"",partner:"",series:"",ai:"",event:""};
+  var LINKS={sundaytosunday:"https://buy.stripe.com/4gM5kDaF04Nc0qAdsIfrW0k",essentials:"https://buy.stripe.com/fZu5kD14q2F4flu4WcfrW0p",sunday:"https://buy.stripe.com/eVqbJ1cN893sgpy2O4frW0l",partner:"https://buy.stripe.com/fZu7sL28u3J8c9iagwfrW0m",jumpstart:"https://buy.stripe.com/3cIcN500mdjI2yI60gfrW0q",series:"https://buy.stripe.com/5kQeVd6oKcfEehqewMfrW0n",ai:"https://buy.stripe.com/14AaEXaF06Vk8X62O4frW0o",event:"https://buy.stripe.com/cNi14n6oKfrQddmdsIfrW0j"};
   var t;function toast(msg){var d=document.querySelector('.toast');if(!d){d=document.createElement('div');d.className='toast';d.setAttribute('role','status');document.body.appendChild(d);}d.textContent=msg;d.hidden=false;clearTimeout(t);t=setTimeout(function(){d.hidden=true},4000);}
   document.querySelectorAll('.buy').forEach(function(b){b.addEventListener('click',function(){var u=LINKS[b.dataset.plan];if(u){window.location.href=u;}else{toast('Online checkout is almost ready. Please check back soon.');}});});
 })();

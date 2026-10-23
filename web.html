@@ -82,7 +82,7 @@
   <div class="wrap">
     <a class="logo" href="index.html"><span class="logo-mark"></span>Bridges</a>
     <ul class="nav-links"><li><a href="index.html">Social Media</a></li><li><a href="web.html" class="on">Websites</a></li><li><a href="logos.html">Logos</a></li><li><a href="ai.html">AI Consulting</a></li><li><a href="contact.html">Contact</a></li></ul>
-    <a class="btn" href="index.html#packages">See packages</a>
+    <a class="btn" href="contact.html#book">Book a free call</a>
   </div>
 </nav>
 
@@ -145,7 +145,7 @@
 <script>
 (function(){
   /* Paste each Stripe Payment Link here once it exists */
-  var LINKS={refresh:"",newsite:"",newsite3:"",care:""};
+  var LINKS={refresh:"https://buy.stripe.com/00w5kDfZkenM0qA0FWfrW05",newsite:"https://buy.stripe.com/00w5kDfZk93sgpyewMfrW06",newsite3:"https://buy.stripe.com/7sYcN58wSa7wb5e0FWfrW07",care:"https://buy.stripe.com/6oU00j7sOdjI3CM1K0frW08"};
   var t;function toast(msg){var d=document.querySelector('.toast');if(!d){d=document.createElement('div');d.className='toast';d.setAttribute('role','status');document.body.appendChild(d);}d.textContent=msg;d.hidden=false;clearTimeout(t);t=setTimeout(function(){d.hidden=true},4000);}
   document.querySelectorAll('.buy').forEach(function(b){b.addEventListener('click',function(){var u=LINKS[b.dataset.plan];if(u){window.location.href=u;}else{toast('Online checkout is almost ready. Please check back soon.');}});});
 })();

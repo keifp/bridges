@@ -66,7 +66,7 @@
   <div class="wrap">
     <a class="logo" href="index.html"><span class="logo-mark"></span>Bridges</a>
     <ul class="nav-links"><li><a href="index.html">Social Media</a></li><li><a href="web.html">Websites</a></li><li><a href="logos.html" class="on">Logos</a></li><li><a href="ai.html">AI Consulting</a></li><li><a href="contact.html">Contact</a></li></ul>
-    <a class="btn" href="index.html#packages">See packages</a>
+    <a class="btn" href="contact.html#book">Book a free call</a>
   </div>
 </nav>
 
@@ -123,7 +123,7 @@
 <script>
 (function(){
   /* Paste each Stripe Payment Link here once it exists */
-  var LINKS={logorefresh:"",identity:"",identity2:"",mark:"",mark3:""};
+  var LINKS={logorefresh:"https://buy.stripe.com/00w3cv8wS5Rg5KUfAQfrW09",identity:"https://buy.stripe.com/dRm14ndRc1B0a1aagwfrW0a",identity2:"https://buy.stripe.com/28E8wPeVgbbA4GQ1K0frW0b",mark:"https://buy.stripe.com/fZudR9eVg6Vk0qA88ofrW0c",mark3:"https://buy.stripe.com/7sY3cv6oK0wWddmcoEfrW0d"};
   var t;function toast(msg){var d=document.querySelector('.toast');if(!d){d=document.createElement('div');d.className='toast';d.setAttribute('role','status');document.body.appendChild(d);}d.textContent=msg;d.hidden=false;clearTimeout(t);t=setTimeout(function(){d.hidden=true},4000);}
   document.querySelectorAll('.buy').forEach(function(b){b.addEventListener('click',function(){var u=LINKS[b.dataset.plan];if(u){window.location.href=u;}else{toast('Online checkout is almost ready. Please check back soon.');}});});
 })();
